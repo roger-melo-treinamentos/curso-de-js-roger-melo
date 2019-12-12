@@ -1,1 +1,1 @@
-# curso-de-js-roger-melo
+# Curso de JavaScript Roger Melo
