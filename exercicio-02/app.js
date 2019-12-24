@@ -51,7 +51,7 @@ Utilize os espaços entre os comentários abaixo para executar os códigos dos e
 - Exiba a "mdn" no console do browser;
 */
 
-
+const mozilla = 'Mozilla Developer Network'
 
 /*
 07 - Comente o console.log acima, e,
