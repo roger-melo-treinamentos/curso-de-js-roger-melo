@@ -6,7 +6,7 @@
   - Armazene em uma constante "sentence" a frase abaixo, modificando "SÉRIE_01,  
     SÉRIE_02 e SÉRIE_03" para as suas séries favoritas;
   - O "e" antes do nome da última série deve ser mantido;
-  - Forme essa frase sem digitar o nome das as séries (claro) e sem utilizar  
+  - Forme essa frase sem digitar o nome das séries (claro) e sem utilizar  
     a notação "array[index]";
   - Exiba a frase no console.
 
