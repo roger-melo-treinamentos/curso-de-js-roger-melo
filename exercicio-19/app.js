@@ -9,6 +9,8 @@ Seu desafio é desenvolver uma versão do quiz que:
 
 Independente se você já fez o quiz dos filmes enquanto acompanhava a aula, tente fazer esse exercício sem rever partes da aula.
 
+É importante que a sua versão do quiz seja feita apenas com o conteúdo que vimos até aqui.
+
 Depois de fazer o que foi pedido acima, crie um repositório no GitHub para a sua aplicação e abra uma issue no repositório do curso com:
 
 - O link da sua versão do quiz;
