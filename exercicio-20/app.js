@@ -7,8 +7,8 @@
 /* 
   02
 
-  - Após um segundo e meio do carregamento da página, exiba a mensagem  
-    "Um segundo e meio se passaram desde que a página foi carregada".
+  - Após um segundo e meio do carregamento da página, exiba no console a  
+    mensagem "Um segundo e meio se passaram desde que a página foi carregada".
 */
 
 
