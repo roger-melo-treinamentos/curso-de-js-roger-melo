@@ -13,7 +13,11 @@
   "Minhas 3 séries favoritas são: SÉRIE_01, SÉRIE_02 e SÉRIE_03."
 */
 
+const my3FavoriteTVShows = ["chaves", "chapolin", "gato felix"]
 
+const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows[0]} ${my3FavoriteTVShows[1]} e ${my3FavoriteTVShows[2]}`
+
+// console.log(sentence)
 
 /*
   02 - Comente o console.log() acima e:
@@ -22,6 +26,7 @@
     possui 3 itens.
 */
 
+// console.log(my3FavoriteTVShows.length === 3)
 
 
 /*
@@ -35,6 +40,9 @@
 */
 
 const randomTVShow = 'Watchmen'
+const isRandomTVShowIncluded = my3FavoriteTVShows.includes("randomTVShow")
+
+// console.log(isRandomTVShowIncluded)
 
 /*
   04 - Comente o console.log() acima e:
@@ -47,6 +55,9 @@ const randomTVShow = 'Watchmen'
   "O tipo de dado que a const "isRandomTVShowIncluded" armazena é: TIPO_DE_DADO."
 */
 
+const typeSentence = ` ${randomTVShow, typeof randomTVShow} pela informação correta;`
+
+// console.log(typeSentence)
 
 
 /*
