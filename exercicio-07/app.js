@@ -20,16 +20,11 @@
 
 const animals = [ 'macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
 
-for( let i = 0; i < animals.length; i++){
-  if(animals[i].includes("leão") ){
-    console.log("existe um leão")
-    break
-  }else {
-    console.log("naaaaao tem")
-  }
+if (!animals.includes("leão")){
+  console.log("leão nao existe")
+}else{
+  console.log("existe um leao")
 }
-
-
 
 /*
   03
@@ -44,13 +39,15 @@ for( let i = 0; i < animals.length; i++){
 
 const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
 let soma = 0
+const limite = 400
 
 for(let i = 0; i < randomNumbers.length; i ++){
-  soma = soma + randomNumbers[i]
-  if(soma > 400){
-    console.log(`"A soma ultrapassou 400. Até aqui, o valor atual é ${soma}`)
+  if(soma > limite){
+    console.log(`A soma ultrapassou ${limite}. Até aqui, o valor atual é ${soma}`)
     break
   }
+  soma += randomNumbers[i]
+
 }
 
 /*
@@ -64,6 +61,17 @@ for(let i = 0; i < randomNumbers.length; i ++){
 
 const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
 
+let frase = ""
+
+for (let i = 0; i < sentence.length; i++){
+  const word = sentence[i]
+  if(word === "certeza"){
+    continue
+  }
+  frase += `${word} `
+}
+console.log(frase)
+ 
 /*
   05
 
@@ -80,7 +88,28 @@ const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sab
 */
 
 const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
+let totalX=  0
+const firstfourStrings = []
+let firstfourBooleans = 0
+let totalFinal =0
 
+  for ( let i = 0; i < randomValues.length; i++ ){
+    if(totalX === 4){
+      break
+    }  
+    if(typeof randomValues[i] === "string"){
+      totalX += 1
+      firstfourStrings.push(randomValues[i])
+    }
+    if(typeof randomValues[i] === "boolean"){
+      firstfourBooleans += 1
+    }
+    totalFinal += 1
+  }
+  console.log(`informações sobre o array randomValues:
+      - As primeiras 4 strings são ${firstfourStrings}
+      - Até que as primeiras 4 strings fossem iteradas, ${firstfourBooleans} booleans foram iterados;
+      - O array foi iterado por ${totalFinal} vezes`)
 /*
   06
 
