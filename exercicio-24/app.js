@@ -33,7 +33,7 @@ const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462]
     
     Por que? 
 
-    Se futuramente a marcação HTML da aplicação mudar, se o parentNode mudar, 
+    Se futuramente a marcação HTML da aplicação mudar, se o parentElement mudar, 
     o código que foi implementado na aula não funcionará.
 */
 
