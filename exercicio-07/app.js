@@ -93,21 +93,29 @@ const firstfourStrings = []
 let firstfourBooleans = 0
 let totalFinal =0
 
-  for ( let i = 0; i < randomValues.length; i++ ){
+
+  for ( let i = 0; i < randomValues.length; i++ ){ 
+    const typeOfItem =  randomValues[i]
+    const isItemAString = typeOfItem === "string"
+    const isItemABoolean = typeOfItem === "boolean"
+
     if(totalX === 4){
       break
     }  
-    if(typeof randomValues[i] === "string"){
-      totalX += 1
+    if(isItemAString){
+      totalX ++ 
       firstfourStrings.push(randomValues[i])
     }
-    if(typeof randomValues[i] === "boolean"){
-      firstfourBooleans += 1
+    if(isItemABoolean){
+      firstfourBooleans ++
     }
-    totalFinal += 1
+    totalFinal ++ 
   }
+  const lastItem = firstfourStrings [firstfourStrings.length -1]
+  const fourStrings = firstfourStrings.join(", ").replace(`${lastItem}`, ` e ${lastItem}`)
+
   console.log(`informações sobre o array randomValues:
-      - As primeiras 4 strings são ${firstfourStrings}
+      - As primeiras 4 strings são ${fourStrings}
       - Até que as primeiras 4 strings fossem iteradas, ${firstfourBooleans} booleans foram iterados;
       - O array foi iterado por ${totalFinal} vezes`)
 /*
@@ -131,23 +139,26 @@ let totalFinal =0
 */
 
 const drinkType = "agua"
+let drinkMessage = null
 
 switch (drinkType){
   case "refrigerante" : 
-    console.log("Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar")
+    drinkMessage = "Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar"
     break;
 
   case "agua" : 
-    console.log("Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.")
+    drinkMessage = "Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio."
     break;
 
   case "suco" : 
-    console.log("Bebida produzida do líquido extraído de frutos.")
+    drinkMessage = "Bebida produzida do líquido extraído de frutos."
     break;
+
   default :
-    console.log("Bebida desconhecida")
+    drinkMessage = "Bebida desconhecida"
 
 }
+console.log(drinkMessage)
 
 /*
   07
@@ -157,23 +168,17 @@ switch (drinkType){
     para testar o switch que você escreveu.
 */
 
-const a = 10
+const number = 10
+const numberMessage = `O valor da "number" é`
 
-// if (a === 0) {
-//   console.log(`O valor de "a" é ${a}`)
-// } else if (a === 1) {
-//   console.log(`O valor de "a" é ${a}`)
-// } else {
-//   console.log('O valor de "a" é qualquer número, exceto 0 e 1')
-// }
 
-switch (a){
+switch (number){
   case 0 :
-    console.log(`O valor de "a" é ${a}`)
+    console.log(`${numberMessage} ${number}`)
     break
   case 1 :
-    console.log(`O valor de "a" é ${a}`)
+    console.log(`${numberMessage} ${number}`)
     break
   default :
-    console.log(`o valor de "a" é qualquer número, exceto 0 e 1`)
+    console.log(`${numberMessage} qualquer número, exceto 0 e 1`)
 }
