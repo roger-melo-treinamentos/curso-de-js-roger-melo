@@ -130,7 +130,24 @@ let totalFinal =0
     da bebida além da que você escolheu.
 */
 
-// const drinkType
+const drinkType = "agua"
+
+switch (drinkType){
+  case "refrigerante" : 
+    console.log("Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar")
+    break;
+
+  case "agua" : 
+    console.log("Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.")
+    break;
+
+  case "suco" : 
+    console.log("Bebida produzida do líquido extraído de frutos.")
+    break;
+  default :
+    console.log("Bebida desconhecida")
+
+}
 
 /*
   07
@@ -140,7 +157,7 @@ let totalFinal =0
     para testar o switch que você escreveu.
 */
 
-const a = 2
+const a = 10
 
 // if (a === 0) {
 //   console.log(`O valor de "a" é ${a}`)
@@ -149,3 +166,14 @@ const a = 2
 // } else {
 //   console.log('O valor de "a" é qualquer número, exceto 0 e 1')
 // }
+
+switch (a){
+  case 0 :
+    console.log(`O valor de "a" é ${a}`)
+    break
+  case 1 :
+    console.log(`O valor de "a" é ${a}`)
+    break
+  default :
+    console.log(`o valor de "a" é qualquer número, exceto 0 e 1`)
+}
