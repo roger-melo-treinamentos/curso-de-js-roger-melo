@@ -1,12 +1,11 @@
-const double = function(number){
-	const doubleResult = number * 2
-	return doubleResult
-}
+const ul = document.querySelector('[data-js="ul"]')
 
-const result = double(3)
+const socialNetworks = ["youtube", "facebook", "twitter", "instagram"]
 
-const showResult = function( value){
-	return `O resultado é: ${value}`
-}
+let HTMLTemplate = ''
 
-console.log(showResult(result))
+socialNetworks.forEach(socialNetwork => {
+	HTMLTemplate += `<li>${socialNetwork}</li>`
+})
+
+ul.innerHTML = HTMLTemplate

@@ -13,9 +13,14 @@
     valor no console.
 */
 
-function convertToString (value) {
-  return String(value)
-}
+// function convertToString (value) {
+//   return String(value)
+// }
+
+
+const convertToString = value => String(value)
+
+console.log(typeof convertToString(true))
 
 /*
   02
@@ -23,7 +28,9 @@ function convertToString (value) {
   - Crie uma função que retorne a quantidade de caracteres que uma string  
     recebida por parâmetro possui.
 */
+const getStringLength = string => string.length
 
+console.log(getStringLength("ola"))
 /*
   03
 
@@ -31,8 +38,13 @@ function convertToString (value) {
     minúsculas;  
   - Utilize a função para exibir a string abaixo no console.
 
-  "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
+
 */
+
+const getCaracters = string => string.toLowerCase()
+
+console.log(getCaracters("DANIELA"))
+
 
 /*
   04
@@ -41,6 +53,10 @@ function convertToString (value) {
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
 
+const getIndex = (chacacter, string) => string.indexOf(chacacter)
+
+
+console.log(getIndex("2", "123"))
 /*
   05
 
@@ -48,13 +64,19 @@ function convertToString (value) {
     passado por argumento existe no array (também passado por argumento).
 */
 
+const isItemIncludes = (item, array) => array.includes(item)
+
+console.log(isItemIncludes("Daniela", ["Daniela","1", "2"]))
+
 /*
   06
 
   - Crie uma função que retorna a concatenação de 2 arrays, passados como  
     argumentos em sua invocação;
 */
+const isContat = (array1, array2) => array1.concat(array2)
 
+console.log(isContat(["daniela"], ["Jardim"]))
 /*
   07
 
@@ -62,13 +84,26 @@ function convertToString (value) {
     mas com o último item removido.
 */
 
+const lastNumber = array => {
+  array.pop()
+  return array
+}
+
+console.log(lastNumber(["1", "3", "daniel"]))
+
+
 /*
+
   08
 
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
+
 */
 
+const isNull = value => value === null
+
+console.log(isNull(null))
 /*
   09
 
@@ -79,6 +114,16 @@ function convertToString (value) {
     argumento a função que exibe seu nome no console e veja se o nome realmente  
     foi exibido.
 */
+
+const invokeCallback = callback => {
+  callback()
+}
+
+const myName = () => {
+  console.log("Dani Jardim")
+}
+
+invokeCallback(myName)
 
 /*
   10
@@ -91,6 +136,13 @@ function convertToString (value) {
     resulte no triplo de 33.
 */
 
+const callCalback = (value, callback) => {
+  return callback(value)
+}
+
+const triple = number => number * 3
+
+console.log (callCalback(33, triple))
 /*
   11
 
@@ -101,6 +153,14 @@ function convertToString (value) {
 */
 
 const numbers = [1, 2, 3]
+
+const showNumbersInfo = (item, index, array) => {
+  const itemPosition = index + 1
+  const items =  array.join(", ")
+  console.log(`O ${itemPosition}º item do array [${items}] é ${item}.`)
+}
+
+numbers.forEach(showNumbersInfo)
 
 /*
   12
@@ -113,10 +173,15 @@ const numbers = [1, 2, 3]
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-for (let i = 0; i < letters.length; i++) {
-  lettersCopy.push(letters[i])
-}
+// for (let i = 0; i < letters.length; i++) {
+//   lettersCopy.push(letters[i])
+// }
 
+letters.forEach(letter =>{
+  lettersCopy.push(letter)
+})
+
+console.log(lettersCopy)
 /*
   13
 
@@ -126,13 +191,6 @@ for (let i = 0; i < letters.length; i++) {
   - Ao gerar o template, verifique no browser se os parágrafos foram incluídos  
     dentro da section vazia do markup abaixo.
 
-  <article>
-    <header>
-      <h1>Sobre "Jurassic Park"</h1>
-    </header>
-
-    <section data-js="section"></section>
-  </article>
 */
 
 const section = document.querySelector('[data-js="section"]')
@@ -143,8 +201,12 @@ const review = [
   'Michael é um ótimo autor, esse sim pesquisa muito antes de escrever um livro, além da história que já prende sua atenção, ele fala bastante de genética (pra explicar como os dinossauros foram criados) e acaba falando um pouco de programação (informática), por causa dos programas avançados e modernos que o parque tinha. E isso foi uma das coisas que eu achei muito legal, ele explica as coisas com gráficos, tabelas, códigos ... enfim, o cara é foda hahaha.',
   'Recomendo esse livro pra quem curte uma boa história de ficção. Apesar de muita gente pensar que o livro não tem graça, porque o legal mesmo é ver o dinossauro no filme, com todos os efeitos especiais, eu digo pra deixar esse pensamento de lado, pois a história é tão bem contada e os detalhes são tão bem relatados, que você passa a fazer parte da história, e vive todas as emoções hahaha.'
 ]
-
+console.log(review)
 let paragraphs = ''
+
+review.forEach (paragraph => {
+  paragraphs += `<p>${paragraph}</p>`
+})
 
 section.innerHTML = paragraphs
 
