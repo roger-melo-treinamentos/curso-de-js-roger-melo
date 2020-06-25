@@ -21,6 +21,46 @@
   Dica: pesquise pelo método "insertAdjacentElement", no MDN;
 */
 
+const username = document.querySelector("#username")
+const usernameRegex = /^[a-zA-z]{6,}$/
+const form = document.querySelector("form")
+const p = document.createElement("p")
+
+username.addEventListener("keyup", event => {
+  const usernameInput = event.target.value
+
+  if(!usernameRegex.test(usernameInput)){
+    p.textContent = "O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas"
+    p.setAttribute ("class", "username-help-feedback")
+    event.target.insertAdjacentElement("afterend", p)
+    return
+  }
+
+  p.textContent = "Username válido =)"
+  p.setAttribute ("class", "username-success-feedback")
+  event.target.insertAdjacentElement("afterend", p)
+  
+})
+
+form.addEventListener("submit", event => {
+  event.preventDefault()
+  const usernameForm = username.value 
+
+  if(!usernameRegex.test(usernameForm)){
+    p.textContent = "Por favor, insira um username válido"
+    p.setAttribute ("class", "submit-help-feedback")
+    event.target.insertAdjacentElement("afterend", p)
+    return
+  }
+  
+  p.textContent = "Dados enviados"
+  p.setAttribute ("class", "submit-success-feedback")
+  event.target.insertAdjacentElement("afterend", p)
+
+})
+
+
+
 /*
   02
 

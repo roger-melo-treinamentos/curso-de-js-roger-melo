@@ -16,9 +16,11 @@
 .submit-help-feedback {
   margin-bottom: 2.5rem;
   color: red;
+  font-weight: bold;
 }
 
 .submit-success-feedback {
   margin-bottom: 2.5rem;
   color: green;
+  font-weight: bold;
 }
