@@ -136,3 +136,16 @@ form.addEventListener('submit', showSubmitInfo)
   Spoiler alert: este tipo de exercício será frequente em etapas mais avançadas  
   do curso, onde falaremos sobre TDD. Vá se aquecendo =D
 */
+const some = (array, func) => {
+  for(let i = 0; i < array.length; i++){
+    if (func(array[i])){
+      return true
+    }
+  }
+
+  return false
+}
+
+console.log(some([1,2,3], item => item === 2))
+
+console.log(some ([4,5,6,], item => item === 3)) 
