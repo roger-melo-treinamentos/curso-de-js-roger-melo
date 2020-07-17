@@ -20,55 +20,56 @@
   
   Dica: pesquise pelo método "insertAdjacentElement", no MDN;
 */
-
-const username = document.querySelector("#username")
-const usernameRegex = /^[a-zA-z]{6,}$/
-const form = document.querySelector("form")
-const paragraphUserNameFeedback = document.createElement("p")
-const paragraphSubmitFeedback = document.createElement("p")
-
+const usernameRegex = /^[a-zA-Z]{6,}$/
+const inputUsername = document.querySelector('#username')
+const paragraphUsernameFeedback = document.createElement('p')
+const paragraphSubmitFeedback = document.createElement('p')
+const form = document.querySelector('form')
 const button = document.querySelector("button")
 
 paragraphSubmitFeedback.setAttribute("data-feedback", "submit-feedback")
 
-username.addEventListener("input", event => {
-  const usernameInput = event.target.value
+inputUsername.addEventListener('input', event => {
+  const inputValue = event.target.value
 
-  const paragraphSubmitFeedbackExists = document
-    .querySelector('[data-feedback= "submit-feedback"]')
+ const paragraphSubmitFeedbackExists = document
+  .querySelector('[data-feedback="submit-feedback"]')
 
-  if (paragraphSubmitFeedbackExists){
-    paragraphSubmitFeedback.remove()
+  if(paragraphSubmitFeedbackExists){
+    paragraphSubmitFeedbackExists.remove()
   }
 
-  if(!usernameRegex.test(usernameInput)){
-    paragraphUserNameFeedback.textContent = "O valor deve conter no mínimo 6 caracteres, com apenas letras maiúsculas e/ou minúsculas"
-    paragraphUserNameFeedback.setAttribute ("class", "username-help-feedback")
-    event.target.insertAdjacentElement("afterend", paragraphUserNameFeedback)
-     return
+  if(!usernameRegex.test(inputValue)){
+    paragraphUsernameFeedback.textContent = "O valor deve conter no mínimo 6 caracteres, com apenas letras maiúculas o/ou minúscula"
+    paragraphUsernameFeedback.setAttribute("class", "username-help-feedback")
+    event.target.insertAdjacentElement('afterend', paragraphUsernameFeedback)
+    return
   }
 
-  paragraphUserNameFeedback.textContent = "Username válido =)"
-  paragraphUserNameFeedback.setAttribute ("class", "username-success-feedback")
-  event.target.insertAdjacentElement("afterend", paragraphUserNameFeedback)
-  
- })
+  paragraphUsernameFeedback.textContent = "Username válido =)"
+  paragraphUsernameFeedback.setAttribute("class", "username-success-feedback")
+  event.target.insertAdjacentElement('afterend', paragraphUsernameFeedback)
 
-form.addEventListener("submit", event => {
+})
+
+
+form.addEventListener('submit', event => {
   event.preventDefault()
-  const usernameForm = username.value 
 
-  if(!usernameRegex.test(usernameForm)){
-    paragraphSubmitFeedback.textContent = "Por favor, insira um username válido"
+  const inputValue = inputUsername.value
+
+  if (!usernameRegex.test(inputValue)){
+    paragraphSubmitFeedback.textContent = "Por favor insira um username válido"
     paragraphSubmitFeedback.setAttribute ("class", "submit-help-feedback")
     button.insertAdjacentElement("afterend", paragraphSubmitFeedback)
     return
   }
-  
+
   paragraphSubmitFeedback.textContent = "Dados enviados"
-  paragraphSubmitFeedback.setAttribute ("class", "submit-success-feedback")
+  paragraphSubmitFeedback.setAttribute("class", "submit-success-feedback")
   button.insertAdjacentElement("afterend", paragraphSubmitFeedback)
 
+  
 })
 
 /*
