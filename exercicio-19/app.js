@@ -21,3 +21,31 @@ Link do repositório do curso: https://github.com/roger-melo-treinamentos/curso-
 
 Ps: se você não conseguiu fazer tudo o que foi pedido acima, abra a issue mesmo assim =)
 */
+const form = document.querySelector('.quiz-form')
+
+const correctAnswers = ['B', 'B', 'B', 'B']
+
+const resultQuiz = document.querySelector("div.result-quiz")
+
+
+form.addEventListener('submit', event => {
+    event.preventDefault()
+  
+let score = 0
+const userResponses = [
+    form.inputQuestion1.value,
+    form.inputQuestion2.value,
+    form.inputQuestion3.value,
+    form.inputQuestion4.value,   
+]
+      
+  userResponses.forEach ((userResponse, index) => {
+    if (userResponse === correctAnswers[index]) {
+      score += 25
+    }
+  })
+
+  resultQuiz.innerText = `Você marcou ${score} pontos`
+})
+
+

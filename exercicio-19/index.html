@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Quiz</title>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Quiz javascript com bootstrap</h1>
+
+      <form class="quiz-form">
+        <div class="my-5">
+          <p class="lead font-weight-normal">1. Quantos planetas Terra cabem dentro do Sol?</p>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion1" value="A" checked >
+              a) Um milhão
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion1" value="B">
+              b) Cem
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion1" value="C" >
+              c) Seiscentos
+            </label>
+          </div>
+        </div>
+
+        <div class="my-5">
+          <p class="lead font-weight-normal">2. Em que lugar vivem mais cangurus do que pessoas?</p>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion2" value="A" checked >
+              a) Indonésia
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion2" value="B">
+              b) Nova Zelândia
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion2" value="C">
+              c) Austrália
+            </label>
+          </div>
+        </div>
+
+        <div class="my-5">
+          <p class="lead font-weight-normal">3. Quantos braços tem um polvo?</p>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion3" value="A" checked>
+              a) Seis
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion3" value="B">
+              b) Oito
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion3" value="C">
+              c) Dez
+            </label>
+          </div>
+        </div>
+
+        <div class="my-5">
+          <p class="lead font-weight-normal">4. Quanto tempo o vidro demora para se decompor?</p>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion4" value="A" checked >
+              a) 500 anos
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion4" value="B">
+              b) tempo indeterminado
+            </label>
+          </div>
+          <div class="form-check my-2" >
+            <label class="form-check-label">
+              <input type="radio" name="inputQuestion4" value="C">
+              c) 1000 anos
+            </label>
+          </div>
+        </div>
+        
+        <div class="">
+          <button type="submit" id="submit-Answers" class="btn btn-info btn-block">Enviar</button>
+        </div>
+        <div class="result-quiz lead font-weight-normal"></div>
+      </form>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
