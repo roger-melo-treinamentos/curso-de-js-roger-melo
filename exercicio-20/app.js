@@ -11,9 +11,9 @@
     mensagem "Um segundo e meio se passaram desde que a página foi carregada".
 */
 
-setTimeout(() => {
-  console.log('Um segundo e meio se passaram desde que a página foi carregada')
-}, 1500)
+// setTimeout(() => {
+//   console.log('Um segundo e meio se passaram desde que a página foi carregada')
+// }, 1500)
 
 /* 
   03
@@ -29,15 +29,26 @@ const counterDisplay = document.querySelector('.counter-container')
 
 let timer = null
 
-buttonInit.addEventListener('click', () =>{
+let quantityOfInitiButtonClicks = 0
+
+buttonInit.addEventListener('click', function counterClickButtonInit (event) {
+
+  quantityOfInitiButtonClicks ++
+    
+  if(quantityOfInitiButtonClicks === 2){
+    buttonInit.removeEventListener('click', counterClickButtonInit)
+    return
+  }
+    
   timer = setInterval(() => {
     counterDisplay.textContent = Number(counterDisplay.textContent) + 1
-    }, 1000);
+  }, 1000);
 
 })
-    
+
 buttonStop.addEventListener('click', () => {    
   clearInterval(timer)
+  quantityOfInitiButtonClicks = 0
   counterDisplay.textContent = Number(counterDisplay.textContent)
 
 })
@@ -45,9 +56,9 @@ buttonStop.addEventListener('click', () => {
 buttonReset.addEventListener('click', () => {
   clearInterval(timer)
   counterDisplay.innerText = 0
+  document.location.reload(true);
     
 })
-
 
 
 /* 
