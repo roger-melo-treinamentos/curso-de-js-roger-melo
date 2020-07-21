@@ -22,30 +22,59 @@ Link do repositório do curso: https://github.com/roger-melo-treinamentos/curso-
 Ps: se você não conseguiu fazer tudo o que foi pedido acima, abra a issue mesmo assim =)
 */
 const form = document.querySelector('.quiz-form')
+const finalScoreContainer = document.querySelector('.final-score-container')
+const correctAnswers = ['B', 'C', 'A', 'B']
 
-const correctAnswers = ['B', 'B', 'B', 'B']
-
-const resultQuiz = document.querySelector("div.result-quiz")
-
-
-form.addEventListener('submit', event => {
-    event.preventDefault()
-  
 let score = 0
-const userResponses = [
-    form.inputQuestion1.value,
-    form.inputQuestion2.value,
-    form.inputQuestion3.value,
-    form.inputQuestion4.value,   
-]
-      
-  userResponses.forEach ((userResponse, index) => {
-    if (userResponse === correctAnswers[index]) {
-      score += 25
-    }
+
+const getUserAnswers = () => {
+  let userAnswers = []
+
+  correctAnswers.forEach ((_, index) => {
+    const userAnswer = form [`inputQuestion ${index + 1}`].value
+    userAnswers.push(userAnswer)
   })
 
-  resultQuiz.innerText = `Você marcou ${score} pontos`
+  return userAnswers
+}
+
+const calculeteUserScore = userAnswers => {
+  userAnswers.forEach ((userAnswer , index) => {
+    const isUserAnswersCorrect = userAnswer === correctAnswers [index]
+    if (isUserAnswersCorrect) {
+      score += 25
+    }
+  }) 
+}
+
+const showFinalScore = () => {
+  scrollTo({
+    top: 0,
+    left: 0,
+    behavior:'smooth'
+  })
+  finalScoreContainer.classList.remove('d-none')
+}
+
+const animateFinalScore = () => {
+  let counter = 0
+  
+  const timer = setInterval( () => {
+    if ( counter === score){
+      clearInterval(timer)
+    }
+    
+    finalScoreContainer.querySelector('span').textContent = `${counter++}%`
+  }, 10)
+}
+
+form.addEventListener ('submit', event => {
+  event.preventDefault()
+
+  const userAnswers = getUserAnswers()
+
+  calculeteUserScore(userAnswers)
+  showFinalScore()
+  animateFinalScore()
+
 })
-
-
