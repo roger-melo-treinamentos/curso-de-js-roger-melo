@@ -1,9 +1,7 @@
 /* 
   01
-
   - Insira apenas o css do bootstrap no index.html.
 */
-
 /* 
   02
 
