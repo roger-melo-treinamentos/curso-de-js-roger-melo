@@ -27,35 +27,31 @@ const counterDisplay = document.querySelector('.counter-container')
 
 let timer = null
 
-let quantityOfInitiButtonClicks = 0
+let isCounting = false
 
-buttonInit.addEventListener('click', function counterClickButtonInit (event) {
-
-  quantityOfInitiButtonClicks ++
-    
-  if(quantityOfInitiButtonClicks === 2){
-    buttonInit.removeEventListener('click', counterClickButtonInit)
+buttonInit.addEventListener('click', function counterClickButtonInit () {
+  
+  if(isCounting) { 
     return
   }
-    
+
+  isCounting = true
   timer = setInterval(() => {
     counterDisplay.textContent = Number(counterDisplay.textContent) + 1
   }, 1000);
 
 })
 
-buttonStop.addEventListener('click', () => {    
+buttonStop.addEventListener('click', () => {   
+  isCounting = false
   clearInterval(timer)
-  quantityOfInitiButtonClicks = 0
+  
   counterDisplay.textContent = Number(counterDisplay.textContent)
-
 })
 
 buttonReset.addEventListener('click', () => {
   clearInterval(timer)
   counterDisplay.innerText = 0
-  document.location.reload(true);
-    
 })
 
 
