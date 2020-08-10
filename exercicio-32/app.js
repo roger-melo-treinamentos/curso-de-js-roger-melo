@@ -5,7 +5,7 @@
   - Seu desafio é implementar uma funcionalidade de busca dos GIFs. Quando o 
     usuário digitar o termo de busca no input e pressionar enter, um GIF deve 
     ser exibido na tela. Como neste exemplo: https://youtu.be/RHe-uCJGCeA
-  - Observe que o GIF mais recente é inserido no acima dos GIFs anteriores;
+  - Observe que o GIF mais recente é inserido acima dos GIFs anteriores;
   - Para fazer requests para a API do GIPHY, você precisará de uma API key. 
     Para obtê-la, siga os seguintes passos:
     - Acesse https://developers.giphy.com/dashboard/ e faça o login;
