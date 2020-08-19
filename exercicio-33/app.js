@@ -38,7 +38,7 @@ const topics = [
     'red', 'green' e 'blue'.
 */
 
-const colors = ['#FF00FF',['#FF0D0D', '0AFA00', '011EFA'], '#7BF0FF']
+const colors = ['#FF00FF', ['#FF0D0D', '#0AFA00', '#011EFA'], '#7BF0FF']
 
 /*
   05
