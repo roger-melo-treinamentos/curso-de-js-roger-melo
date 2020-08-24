@@ -1,21 +1,14 @@
-const phaseScores = [
-  { name: 'Vinicius Costa', score: 337 },
-  { name: 'Roger Melo', score: 40 },
-  { name: 'Alfredo Braga', score: 234 },
-  { name: 'Pedro H. Silva', score: 261 },
-  { name: 'Ana Paula Rocha', score: 491 },
-  { name: 'Vinicius Costa', score: 167 },
-  { name: 'Roger Melo', score: 137 },
-  { name: 'Alfredo Braga', score: 135 },
-  { name: 'Ana Paula Rocha', score: 359 },
-  { name: 'Pedro H. Silva', score: 133 }
+const books = [
+  { name: 'Código Limpo', price: 30 },
+  { name: 'O milagre da manhã', price: 5 },
+  { name: 'Alice no País das Maravilhas', price: 10 },
+  { name: 'Quem Pensa Enriquece', price: 50 },
+  { name: 'O livro da ciência', price: 40 }
 ]
 
-const rogerScore = phaseScores.reduce((accumulator, phaseScore) => {
-	if(phaseScore.name === 'Roger Melo') {
-		accumulator +=phaseScore.score
-	}
-	return accumulator
-}, 0)
+const booksOnSale = books
+  .filter(({price}) => price > 20)
+  .map (({name, price}) => 
+    `o preço caiu para "${name}" caiu para "${price}"` )
 
-console.log(rogerScore)
+debugger
