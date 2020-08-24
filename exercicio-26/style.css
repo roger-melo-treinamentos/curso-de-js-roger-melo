@@ -1,0 +1,17 @@
+body {
+  background-color: #212121;
+}
+
+.clock-container {
+  font-size: 4em;
+  text-align: center;
+  margin: 200px auto 0;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clock-container span {
+  padding: 20px;
+  background: #006CE6;
+  border-radius: 10px;
+}
