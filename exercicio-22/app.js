@@ -8,6 +8,10 @@
 
 const names = ['Caio', 'André', 'Dário']
 
+const namesCopy = names.map(item => item).sort()
+
+console.log(namesCopy, names)
+
 /*
   02
 
@@ -23,6 +27,13 @@ const characters = [
   { id: 04, name: 'Mufasa' }
 ]
 
+
+const orderCharacters = characters.map(item => item)
+  .sort((item1, item2) => item1.id - item2.id)
+
+
+console.log(characters, orderCharacters)
+
 /*
   03
 
@@ -33,6 +44,13 @@ const characters = [
 
 const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291]
 
+const orderNumber = numbers.map(item => item)
+  .sort((item1, item2) => item1 - item2)
+
+console.log(orderNumber)
+
+
+
 /*
   04
 
@@ -40,6 +58,10 @@ const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291]
 */
 
 const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70]
+
+const greatestNumberArray = randomNumbers.find((number) => number > 50)
+
+console.log(greatestNumberArray)
 
 /*
   05
@@ -51,6 +73,10 @@ const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70]
 
 const people = ['Cauã', 'Alfredo', 'Bruno']
 
+const peopleCopy = people.map(name => name).sort().reverse()
+
+console.log(peopleCopy)
+
 /*
   06
   
@@ -61,6 +87,20 @@ const people = ['Cauã', 'Alfredo', 'Bruno']
 
 const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
 
+const newIngredients = ingredients.reduce((acc, item, index, array) => {
+  const correctWord =  item [item.length - 1] === 'a' ? 'cozida' : 'cozido'
+  // const correctWord = /a$/.test(item) ? 'cozida' : 'cozido' // regex
+
+
+  if (index === array.length -1){
+    return acc + `${item} ${correctWord}`
+  }
+  return acc + `${item} ${correctWord}, ` 
+
+},'')
+
+console.log(newIngredients)
+
 /*
   07
   
@@ -68,7 +108,7 @@ const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
     assistiram apenas os filmes da Disney.
 */
 
-const topBrazilmovies = [
+const topBrazilMovies = [
   { title: 'Vingadores: Ultimato', peopleAmount: 19686119, distributedBy: 'Disney' },
   { title: 'Titanic', peopleAmount: 17050000, distributedBy: 'Paramount / 20th Century' },
   { title: 'O Rei Leão', peopleAmount: 16267649, distributedBy: 'Disney' },
@@ -80,6 +120,13 @@ const topBrazilmovies = [
   { title: 'Os Vingadores', peopleAmount: 10968065, distributedBy: 'Disney' },
   { title: 'Dona Flor e Seus Dois Maridos', peopleAmount: 10735524, distributedBy: 'Embrafilme' }
 ]
+
+const viewMovie = topBrazilMovies
+  .filter(({distributedBy}) => distributedBy === 'Disney')
+  .reduce((acc, item) => acc + item.peopleAmount, 0)
+
+console.log(viewMovie)
+
 
 /*
   08
@@ -101,12 +148,37 @@ const pets = [
   { name: 'Chico', age: 6, gender: 'Male', type: 'Dog' }
 ]
 
+const filterPets = pets
+  .filter((pet) => pet.type === 'Dog')
+  .map(dog => ({ 
+    name: dog.name, 
+    age: dog.age *7, 
+    gender:dog.gender,
+     type: dog.type
+  })) 
+
+
+console.log(filterPets)
+
 /*
   09
   
-  - Considerando o array topBrazilmovies, através do map ou do reduce, insira 
+  - Considerando o array topBrazilMovies, através do map ou do reduce, insira 
     os nomes dos filmes na ul do index.html.
 */
+
+const ul = document.querySelector('.list-group')
+
+// const movieNames = topBrazilMovies
+//   .map (movie => `<li>${movie.title}</li>`)
+//   .join('')
+
+const movieNames = topBrazilMovies.reduce((acc, movie) => 
+  acc + `<li>${movie.title}</li>` , '')
+
+ul.innerHTML = movieNames
+
+
 
 /*
   10
