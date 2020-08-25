@@ -6,11 +6,13 @@
   - Exiba o array ordenado no console.
 */
 
+const getArrayCopy = array => array.map(item => item)
+
 const names = ['Caio', 'André', 'Dário']
 
-const namesCopy = names.map(item => item).sort()
+const namesInAlphabeticalOrder = getArrayCopy(names).sort()
 
-console.log(namesCopy, names)
+console.log(namesInAlphabeticalOrder, names)
 
 /*
   02
@@ -28,11 +30,12 @@ const characters = [
 ]
 
 
-const orderCharacters = characters.map(item => item)
-  .sort((item1, item2) => item1.id - item2.id)
+const charactersOrderedById = characters
+  .map (({id, name}) => ({ id, name}))
+  .sort((item2, item1) => item2.id - item1.id)
 
 
-console.log(characters, orderCharacters)
+console.log(characters, charactersOrderedById)
 
 /*
   03
@@ -44,10 +47,10 @@ console.log(characters, orderCharacters)
 
 const numbers = [41, 15, 63, 349, 25, 22, 143, 64, 59, 291]
 
-const orderNumber = numbers.map(item => item)
+const numberIsAscendingOrder = getArrayCopy(numbers)
   .sort((item1, item2) => item1 - item2)
 
-console.log(orderNumber)
+console.log(numberIsAscendingOrder)
 
 
 
@@ -73,9 +76,9 @@ console.log(greatestNumberArray)
 
 const people = ['Cauã', 'Alfredo', 'Bruno']
 
-const peopleCopy = people.map(name => name).sort().reverse()
+const peopleInReverseAlphabeticOrder = getArrayCopy(people).sort().reverse()
 
-console.log(peopleCopy)
+console.log(peopleInReverseAlphabeticOrder)
 
 /*
   06
@@ -89,10 +92,14 @@ const ingredients = ['vinho', 'tomate', 'cebola', 'cogumelo']
 
 const newIngredients = ingredients.reduce((acc, item, index, array) => {
   const correctWord =  item [item.length - 1] === 'a' ? 'cozida' : 'cozido'
+  const isLastItem = index === array.length -1
+  const ingredientMessage = acc + `${item} ${correctWord}`
+
+  return isLastItem ? ingredientMessage : acc + `${item} ${correctWord}, `
   // const correctWord = /a$/.test(item) ? 'cozida' : 'cozido' // regex
 
 
-  if (index === array.length -1){
+  if (isLastItem){
     return acc + `${item} ${correctWord}`
   }
   return acc + `${item} ${correctWord}, ` 
@@ -123,7 +130,7 @@ const topBrazilMovies = [
 
 const viewMovie = topBrazilMovies
   .filter(({distributedBy}) => distributedBy === 'Disney')
-  .reduce((acc, item) => acc + item.peopleAmount, 0)
+  .reduce((acc, {peopleAmount}) => acc + peopleAmount, 0)
 
 console.log(viewMovie)
 
@@ -149,13 +156,8 @@ const pets = [
 ]
 
 const filterPets = pets
-  .filter((pet) => pet.type === 'Dog')
-  .map(dog => ({ 
-    name: dog.name, 
-    age: dog.age *7, 
-    gender:dog.gender,
-     type: dog.type
-  })) 
+  .filter(({type}) => type === 'Dog')
+  .map(({name, age, gender, type}) => ({ name, age: age *7, gender, type })) 
 
 
 console.log(filterPets)
@@ -173,8 +175,8 @@ const ul = document.querySelector('.list-group')
 //   .map (movie => `<li>${movie.title}</li>`)
 //   .join('')
 
-const movieNames = topBrazilMovies.reduce((acc, movie) => 
-  acc + `<li>${movie.title}</li>` , '')
+const movieNames = topBrazilMovies
+  .reduce((acc, {title}) => acc + `<li>${title}</li>` , '')
 
 ul.innerHTML = movieNames
 
