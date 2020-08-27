@@ -27,13 +27,8 @@ const people = [
   { firstName: 'Eric', lastName: 'Silva', score: 82 }
 ]
 
-const peopleCopy = people.map((person) => { 
-  return {
-    firstName: person.firstName,
-    lastName: person.lastName,
-    score: person.score
-  }
-  
+const peopleCopy = people.map(({firstName,lastName, score}) => { 
+  return {firstName, lastName, score}  
 })
 
 const greatestScore = peopleCopy
@@ -82,8 +77,11 @@ const friends = [
   { id: 5, name: 'Solange', nearMe: false }
 ]
 
+const friendsNearMe = friends
+  .filter(friend => friend.nearMe)
+  .map((friend) => friend.name )
 
-
+console.log(`${friendsNearMe}`)
 /*
   06
 
@@ -93,6 +91,11 @@ const friends = [
 
 const numbers = [46, 86, 212, 29, 51, 9, 25, 42, 81]
 
+const filterOdd = numbers
+  .filter(number => number %2)
+  .reduce((acc, number) => acc += number, 0)
+
+console.log(filterOdd)
 /*
   07
 
@@ -113,3 +116,10 @@ const data = [{
   country: 'Indonesia',
   population: 263991379
 }]
+
+
+const sumCountry = data
+  .filter(country => country.country !== 'China')
+  .reduce((acc, country )=> acc =+ country.population, 0)
+ 
+  console.log(sumCountry)
