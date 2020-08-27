@@ -7,6 +7,10 @@
 
 const myString = '    JS      '
 
+const newSting = myString.trim()
+
+
+console.log(newSting)
 /*
   02
 
@@ -23,6 +27,13 @@ const people = [
   { firstName: 'Eric', lastName: 'Silva', score: 82 }
 ]
 
+const peopleCopy = people.map(item => item)
+
+const greatestScore = peopleCopy
+  .sort((item1, item2) => item2.score - item1.score)
+
+ console.log(greatestScore)
+
 /*
   03
 
@@ -35,6 +46,9 @@ const people = [
 
 const animals = ['cão', 'gato', 'boi', 'leão', 'gnu', 'alce', 'ema']
 
+const nanesWithMoreTreeLatters = animals.filter((animal => animal.length === 3))
+
+console.log(nanesWithMoreTreeLatters)
 /*
   04
 
