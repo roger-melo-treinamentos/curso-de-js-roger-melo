@@ -27,7 +27,14 @@ const people = [
   { firstName: 'Eric', lastName: 'Silva', score: 82 }
 ]
 
-const peopleCopy = people.map(item => item)
+const peopleCopy = people.map((person) => { 
+  return {
+    firstName: person.firstName,
+    lastName: person.lastName,
+    score: person.score
+  }
+  
+})
 
 const greatestScore = peopleCopy
   .sort((item1, item2) => item2.score - item1.score)
@@ -55,8 +62,9 @@ console.log(nanesWithMoreTreeLatters)
   - Baseado no array "animals", gere um novo array com a quantidade de letras do 
     nome de cada animal. Ex.: [6, 8, 2].
 */
+const animalsNamelength = animals.map(animal => animal.length)
 
-
+console.log(animalsNamelength)
 
 /*
   05
