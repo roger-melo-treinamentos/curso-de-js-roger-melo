@@ -5,7 +5,11 @@
     abaixo.
 */
 
-const message = 'Próxima etapa: 10'
+const message = 'Próxima etapa: 10'.includes(':')
+
+console.log(message)
+
+
 
 /*
   02
@@ -15,6 +19,10 @@ const message = 'Próxima etapa: 10'
 */
 
 const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462]
+  .includes(635)
+
+console.log(numbers)
+
 
 /*
   A partir daqui, vamos treinar nossas skills de refatoração.
