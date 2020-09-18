@@ -3,7 +3,7 @@ name: Dúvidas
 about: Esclarecimento de dúvidas
 title: Etapa X, Xxxxx - Aula XX-XX
 labels: ''
-assignees: Roger-Melo
+assignees: ''
 
 ---
 
