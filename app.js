@@ -1,14 +1,30 @@
-const books = [
-  { name: 'Código Limpo', price: 30 },
-  { name: 'O milagre da manhã', price: 5 },
-  { name: 'Alice no País das Maravilhas', price: 10 },
-  { name: 'Quem Pensa Enriquece', price: 50 },
-  { name: 'O livro da ciência', price: 40 }
-]
+const past = new Date(' sept 23 2020 7:47:00')
+const present = new Date()
 
-const booksOnSale = books
-  .filter(({price}) => price > 20)
-  .map (({name, price}) => 
-    `o preço caiu para "${name}" caiu para "${price}"` )
 
-debugger
+const difference = present.getTime() - past.getTime()
+console.log(difference);
+
+const seconds = Math.round(difference / 1000)
+
+console.log({seconds})
+
+const minnutes = Math.round(seconds / 60)
+
+console.log({minnutes})
+
+const hours = Math.round(minnutes / 60)
+
+console.log({hours})
+
+const days = Math.round(hours / 24)
+
+console.log({days})
+
+console.log( `Escrito há ${days}`)
+
+
+const timestamp = 173897598725
+
+console.log(new Date(timestamp))
+
