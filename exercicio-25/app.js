@@ -22,6 +22,8 @@ const months = [
 
 console.log(months[1])
 
+console.log(months.indexOf("fevereiro"))
+
 /*
   02
 
@@ -76,9 +78,14 @@ console.log(future)
   - Exiba no console a quantidade de dias entre o momento futuro e o passado.
 */
 
-console.log((future.getDay()) - (past.getDay()))
 
+const difference = future.getTime() - past.getTime()
 
+const differenceInDays = Math.round(difference / 1000 / 60 / 60 / 24)
+
+console.log(differenceInDays)
+
+S
 
 /*
   08
