@@ -20,6 +20,8 @@ const months = [
   'Dezembro'
 ]
 
+console.log(months[1])
+
 /*
   02
 
@@ -27,11 +29,17 @@ const months = [
   - Exiba o objeto no console.
 */
 
+const present = new Date()
+
+console.log(present)
+
 /*
   03
 
   - Baseado no objeto que você acabou de criar, exiba o ano atual no console.
 */
+
+console.log(present.getFullYear())
 
 /*
   04
@@ -40,24 +48,37 @@ const months = [
   - Exiba o objeto no console.
 */
 
+const past = new Date(" fri sept 23 1989 10:30:32" )
+
+console.log(past)
 /*
   05
 
   - Exiba, no console, a hora do objeto que você acabou de criar.
 */
 
+console.log(past.getHours())
 /*
   06
 
   - Crie um objeto de data que represente um momento futuro;
   - Exiba o objeto no console.
+  
 */
+
+const future = new Date ("Oct 04 2020 10:00:09")
+
+console.log(future)
 
 /*
   07
 
   - Exiba no console a quantidade de dias entre o momento futuro e o passado.
 */
+
+console.log((future.getDay()) - (past.getDay()))
+
+
 
 /*
   08
