@@ -1,0 +1,22 @@
+body{
+  background-color: black;
+  color: #fff;
+  font-size: 90px;
+  font-family: 'Lato', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.days-container{
+
+}
+
+.days{
+  display: block;
+  font-size: 20px;
+  margin-top: 10px;
+}
