@@ -38,7 +38,7 @@ const formatDateInfo = date => {
   const weekDays = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira']
 
   
-  return ` ${formatTimeUnit(hours)}:${formatTimeUnit(minutes)}- ${weekDays[weekDay]}, ${formatTimeUnit(weekDay)} de ${monthNames[month]} de ${year}"`
+  return `${formatTimeUnit(hours)}:${formatTimeUnit(minutes)}- ${weekDays[weekDay]}, ${formatTimeUnit(weekDay)} de ${monthNames[month]} de ${year}"`
 }
 
 console.log(formatDateInfo(present))
@@ -119,19 +119,19 @@ updateSomething({ target: '1', property: '2', willChange: 'valor indesejado' })
 
 const clockContainer = document.querySelector('.clock-container')
 
+const getclockHTML = (hours, minutes, seconds) => `
+  <span>${formatTimeUnit(hours)}</span> :
+  <span>${formatTimeUnit(minutes)}</span> :
+  <span>${formatTimeUnit(seconds)}</span>
+`
+
 const updateClock = () => {
   const present = new Date()
   const hours = present.getHours()
   const minutes = present.getMinutes()
   const seconds = present.getSeconds()
 
-  const clockHTML = `
-    <span>${formatTimeUnit(hours)}</span> :
-    <span>${formatTimeUnit(minutes)}</span> :
-    <span>${formatTimeUnit(seconds)}</span>
-  `
-
-  clockContainer.innerHTML = clockHTML
+  clockContainer.innerHTML = getclockHTML(hours, minutes, seconds)
 }
 
 setInterval(updateClock, 1000)
