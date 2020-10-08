@@ -6,6 +6,20 @@
   - Não utilize a date-fns.
 */
 
+const present = new Date()
+
+const formatTimeUnit = unit => String(unit).length === 1 ? `0${unit}`: unit 
+
+const formatDate = date => {
+  const day = date.getDate()
+  const month = date.getMonth() + 1 
+  const year = date.getFullYear()
+  return`
+    ${formatTimeUnit(day)}/${formatTimeUnit(month)}/${formatTimeUnit(year)}`
+}
+
+console.log(formatDate(present))
+
 /*
   02
 
@@ -13,6 +27,21 @@
     data na formatação: "03:07 - domingo, 7 de junho de 2020";
   - Não utilize a date-fns.
 */
+
+const formatDateInfo = date => {
+  const hours = date.getHours()
+  const minutes = date.getMinutes()
+  const year = date.getFullYear()
+  const weekDay = date.getDay()
+  const month = date.getMonth()
+  const monthNames = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outrubro', 'novembro', 'dezembro']
+  const weekDays = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira']
+
+  
+  return ` ${formatTimeUnit(hours)}:${formatTimeUnit(minutes)}- ${weekDays[weekDay]}, ${formatTimeUnit(weekDay)} de ${monthNames[month]} de ${year}"`
+}
+
+console.log(formatDateInfo(present))
 
 /*
   03
@@ -24,6 +53,9 @@
 
 const user = { id: 42, isVerified: true }
 
+const {id, isVerified } = user
+
+console.log(id, isVerified)
 /*
   04
 
@@ -36,6 +68,10 @@ const user = { id: 42, isVerified: true }
 
 const robotA = { name: 'Bender' }
 const robotB = { name: 'HAL 9000' }
+
+const {name: nameA} = robotA
+const {name: nameB} = robotB
+console.log(nameA, nameB)
 
 /*
   05
@@ -50,6 +86,9 @@ const a = 'a'
 const b = 'b'
 const c = 'c'
 
+const alphabet = {a, b, c}
+
+console.log(alphabet)
 /*
   06
 
