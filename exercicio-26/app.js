@@ -126,9 +126,9 @@ const updateClock = () => {
   const seconds = present.getSeconds()
 
   const clockHTML = `
-    <span>${String(hours).length === 1 ? `0${hours}` : hours}</span> :
-    <span>${String(minutes).length === 1 ? `0${minutes}` : minutes}</span> :
-    <span>${String(seconds).length === 1 ? `0${seconds}` : seconds}</span>
+    <span>${formatTimeUnit(hours)}</span> :
+    <span>${formatTimeUnit(minutes)}</span> :
+    <span>${formatTimeUnit(seconds)}</span>
   `
 
   clockContainer.innerHTML = clockHTML
