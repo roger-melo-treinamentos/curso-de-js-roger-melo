@@ -9,7 +9,9 @@ console.log('Linha 2')
 console.log('Linha 3')
 console.log('Linha 4')
 
-
+setTimeout( ()=> {
+  console.log("função codigo assincrono")
+}, 2000)
 
 console.log('Linha 5')
 console.log('Linha 6')
@@ -27,7 +29,11 @@ function logGreeting (name) {
   console.log(`olá, ${name}`)
 }
 
-// x(logGreeting)
+const x = callback => {
+  callback('Dani')
+}
+
+x(logGreeting)
 
 /*
   03
@@ -36,7 +42,8 @@ function logGreeting (name) {
 */
 
 const numbers = [3, 4, 10, 20]
-const lesserThanFive = numbers.filter(num => num < 5)
+const getLessThaFive = num => num < 5
+const lesserThanFive = numbers.filter(getLessThaFive)
 
 console.log(lesserThanFive)
 
@@ -47,11 +54,10 @@ console.log(lesserThanFive)
 */
 
 const prices = [12, 19, 7, 209]
-let totalPrice = 0
 
-for (let i = 0; i < prices.length; i++) {
-  totalPrice += prices[i]
-}
+const getTotalPrice = (acc, price) => acc + price
+
+const totalPrice = prices.reduce( getTotalPrice, 0)
 
 console.log(`Preço total: ${totalPrice}`)
 
@@ -63,7 +69,10 @@ console.log(`Preço total: ${totalPrice}`)
 */
 
 let car = { color: 'amarelo' }
+let secondCar = car
+secondCar.color = 'azul'
 
+console.log(car.color, secondCar.color)
 /*
   06
 
@@ -73,6 +82,15 @@ let car = { color: 'amarelo' }
   - Se todos os argumentos forem passados, retorne a string 'A função foi 
     invocada com 3 argumentos'.
 */
+
+const myFunc = (param1, param2, param3) => {
+  const isSomeParameterUndefined = [param1, param2, param3].includes(undefined)
+  return isSomeParameterUndefined 
+    ? 'A função deve ser invocada com 3 argumentos'
+    : 'A função foi invocada com 3 argumentos'
+}
+
+console.log(myFunc(() => {}, {}, []))
 
 /*
   07
