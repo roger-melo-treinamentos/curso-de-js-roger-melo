@@ -119,27 +119,39 @@ let booksBox = {
   booksIn: 0
 }
 
+const getPluralOrSingular = ( quantity, singular, plural) => 
+  quantity === 1 ? singular : plural
+
+const getAvaliableSpacesMessage = (spaces,  booksIn) =>{
+  const avaliableSpaces = spaces - booksIn
+  const fitPluralOrSingular = getPluralOrSingular(avaliableSpaces,'cabe',  'cabem')
+  const bookPluralOrSingular = getPluralOrSingular (avaliableSpaces, 'livro', 'livros')
+  return `Só ${fitPluralOrSingular} mais ${avaliableSpaces} ${bookPluralOrSingular}`
+}
+
 booksBox.addBooks = booksQauntity => {
-  if(booksBox.booksIn === booksBox.spaces){
+  const {spaces } = booksBox
+  const isBoxFilled = booksBox.booksIn === spaces
+  const boxSpacesAreNotEnough = booksBox.booksIn + booksQauntity > spaces
+
+  if(isBoxFilled){
     return 'A caixa já esta cheia'
   }
-  if(booksBox.booksIn + booksQauntity > booksBox.spaces){
-    const avaliableSpaces = booksBox.spaces - booksBox.booksIn
-    const fitPluralOrSingular = avaliableSpaces === 1 ? 'cabe' : 'cabem'
-    const bookPluralOrSingular = avaliableSpaces === 1 ? 'livro' : 'livros'
-    return `Só ${fitPluralOrSingular} mais ${avaliableSpaces} ${bookPluralOrSingular}`
+
+  if(boxSpacesAreNotEnough){
+    return getAvaliableSpacesMessage (spaces, booksBox.booksIn)
   }
 
   booksBox.booksIn += booksQauntity
-  
-  const bookPluralOrSingular = booksBox.booksIn === 1 ? 'livro' : 'livros'
+
+  const bookPluralOrSingular = getPluralOrSingular (booksBox.booksIn, 'livro', 'livros')
   return `Já há ${booksBox.booksIn} ${bookPluralOrSingular} na caixa`
 }
 
-// console.log(booksBox.addBooks(7))
-// console.log(booksBox.addBooks(3))
-// console.log(booksBox.addBooks(3))
-console.log(booksBox.addBooks(1))
+// console.log(booksBox.addBooks(1))
+console.log(booksBox.addBooks(4))
+console.log(booksBox.addBooks(3))
+
 
 
 console.log(booksBox)
