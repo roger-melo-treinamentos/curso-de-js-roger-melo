@@ -105,7 +105,7 @@ const updateSomething = ({target, property, willChange} = {}) => {
     willChange = 'valor desejado'
   }
 
-  useDataSomewhereElse({target,property,willChange})
+  useDataSomewhereElse({target, property, willChange})
 }
 
 updateSomething({ target: '1', property: '2', willChange: 'valor indesejado' })

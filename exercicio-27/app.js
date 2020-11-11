@@ -4,19 +4,19 @@
   - Implemente um código assíncrono entre os console.log() abaixo.
 */
 
-console.log('Linha 1')
-console.log('Linha 2')
-console.log('Linha 3')
-console.log('Linha 4')
+// console.log('Linha 1')
+// console.log('Linha 2')
+// console.log('Linha 3')
+// console.log('Linha 4')
 
-setTimeout( ()=> {
-  console.log("função codigo assincrono")
-}, 2000)
+// setTimeout( ()=> {
+//   console.log("função codigo assincrono")
+// }, 2000)
 
-console.log('Linha 5')
-console.log('Linha 6')
-console.log('Linha 7')
-console.log('Linha 8')
+// console.log('Linha 5')
+// console.log('Linha 6')
+// console.log('Linha 7')
+// console.log('Linha 8')
 
 /*
   02
@@ -90,7 +90,7 @@ const myFunc = (param1, param2, param3) => {
     : 'A função foi invocada com 3 argumentos'
 }
 
-console.log(myFunc(() => {}, {}, []))
+console.log(myFunc(() => {}, {},  ))
 
 /*
   07
@@ -118,3 +118,28 @@ let booksBox = {
   spaces: 5,
   booksIn: 0
 }
+
+booksBox.addBooks = booksQauntity => {
+  if(booksBox.booksIn === booksBox.spaces){
+    return 'A caixa já esta cheia'
+  }
+  if(booksBox.booksIn + booksQauntity > booksBox.spaces){
+    const avaliableSpaces = booksBox.spaces - booksBox.booksIn
+    const fitPluralOrSingular = avaliableSpaces === 1 ? 'cabe' : 'cabem'
+    const bookPluralOrSingular = avaliableSpaces === 1 ? 'livro' : 'livros'
+    return `Só ${fitPluralOrSingular} mais ${avaliableSpaces} ${bookPluralOrSingular}`
+  }
+
+  booksBox.booksIn += booksQauntity
+  
+  const bookPluralOrSingular = booksBox.booksIn === 1 ? 'livro' : 'livros'
+  return `Já há ${booksBox.booksIn} ${bookPluralOrSingular} na caixa`
+}
+
+// console.log(booksBox.addBooks(7))
+// console.log(booksBox.addBooks(3))
+// console.log(booksBox.addBooks(3))
+console.log(booksBox.addBooks(1))
+
+
+console.log(booksBox)
