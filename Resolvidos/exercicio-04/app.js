@@ -5,20 +5,18 @@
   - Se você não assiste séries, armazene seus 3 filmes favoritos;
   - Armazene em uma constante "sentence" a frase abaixo, modificando "SÉRIE_01,  
     SÉRIE_02 e SÉRIE_03" para as suas séries favoritas;
-  - O "e" antes do nome da última série deve ser mantido;
+  - O "e" antes do nome da última  série deve ser mantido;
   - Forme essa frase sem digitar o nome das séries (claro) e sem utilizar  
     a notação "array[index]";
   - Exiba a frase no console.
 
   "Minhas 3 séries favoritas são: SÉRIE_01, SÉRIE_02 e SÉRIE_03."
 */
-const my3FavoriteTVShows = ['Breaking Bad', 'GOT', 'Cobra Kai'] 
-
-const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(' ,').replace(',C', 'e C')}.`
+const my3FavoriteTVShows = ['The Mandalorian', 'Star Trek', 'Avatar']
+const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', ')}.`
+  .replace(', A', ' e A')
 
 //console.log(sentence)
-
-
 /*
   02 - Comente o console.log() acima e:
 
@@ -43,7 +41,6 @@ const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
 
 //console.log(isRandomTVShowIncluded)
 
-
 /*
   04 - Comente o console.log() acima e:
 
@@ -54,11 +51,10 @@ const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
 
   "O tipo de dado que a const "isRandomTVShowIncluded" armazena é: TIPO_DE_DADO."
 */
-let isTypeof = typeof(isRandomTVShowIncluded)
-const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armazena é: ${isTypeof}.`
+
+const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armazena é: ${typeof isRandomTVShowIncluded}.`
 
 //console.log(typeSentence)
-
 
 /*
   05 - Comente o console.log() acima e:
@@ -73,14 +69,11 @@ const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armaze
   "A string que a "typeSentence" armazena tem mais de NÚMERO_DE_CARACTERES  
   caracteres? BOOLEAN."
 */
+const numberToCheck = 39
+const boo = String(typeSentence.length > 39)
 
-const number = 39
-let isTrueOrFalse = (String(typeSentence.length > number).replace('t', 'T'))
+//console.log(`A string que a "typeSentence" armazena tem mais de ${numberToCheck} caracteres? ${String(typeSentence.length > numberToCheck).replace('t', 'T')}`)
 
-let frase = `A string que a "typeSentence" armazena tem mais de ${number}  
-caracteres? ${isTrueOrFalse}.`
-
-//console.log(frase)
 
 /*
   06 - Comente o console.log() acima e:
@@ -105,11 +98,11 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
   - Você sabe por que essa conversão resultou em true?
 */
 
-const crazyOperation = null+1;
+const crazyOperation = null+1
 const crazyConversion = Boolean(crazyOperation)
 
 //console.log(crazyConversion)
-//resultou em true pq 1 é positivo
+
 
 /*
   08 - Comente o console.log() acima e:
@@ -123,10 +116,10 @@ const crazyConversion = Boolean(crazyOperation)
   "A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação  
   é: BOOLEAN."
 */
-const ages = [31, 82, 61, 11];
-const agesSum = ages[0]+ages[2]
+const ages = [31,82, 61, 11]
+const agesSum = ages[0] + ages[2]
 
-//console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação  é: ${agesSum <= 92}.`)
+//console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação é: ${agesSum <=92}.`)
 
 
 /*
@@ -138,7 +131,7 @@ const agesSum = ages[0]+ages[2]
   - Exiba a "isNotAString" no console.
 */
 
-const isNotAString = (typeof(randomTVShow) !== 'string')
+const isNotAString = typeof randomTVShow !== 'string'
 
 //console.log(isNotAString)
 
@@ -153,4 +146,10 @@ const isNotAString = (typeof(randomTVShow) !== 'string')
 
 const evenNumbers = [0, 2, 4, 6, 8, 10]
 
-console.log(evenNumbers.indexOf(8) !== -1)
+//console.log(evenNumbers.indexOf(8) !== -1)
+
+for (let i = 0; i < 5; i++) { 
+  console.log(`Dentro do Loop: ${i}`)
+}
+
+console.log(`Fora do Loop`)

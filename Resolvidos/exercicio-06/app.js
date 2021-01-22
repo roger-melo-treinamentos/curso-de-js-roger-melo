@@ -23,15 +23,15 @@
     "Nem pera nem abacaxi existem no array "fruits".".
 */
 
+/*
 const fruits = ['morango', 'banana', 'mamão']
 
-/*
 if(fruits.includes('abacaxi')) {
   console.log('A string "abacaxi" existe no array fruits.')
-} else if(fruits.includes('pera')) {
+} else if (fruits.includes('pera')) {
   console.log('A string "pera" existe no array fruits.')
 } else {
-  console.log('Nem pera nem abacaxi existem no array "fruits".')
+  console.log('Nem pera nem abacaxi existem no array "fruits"')
 }
 */
 
@@ -48,14 +48,30 @@ if(fruits.includes('abacaxi')) {
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
 
-const horaAtual = 12
+
 /*
-if(horaAtual >= 6 && horaAtual <= 11) {
+const hour = 19;
+
+if(hour >= 6 && hour <= 11 ) {
   console.log('Bom dia!')
-} else if (horaAtual >= 12 && horaAtual <=17) {
+} else if (hour >= 12 && hour <= 17) {
   console.log('Boa Tarde!')
 } else {
-  console.log('Boa Noite!')
+  console.log('Boa Noite!') 
+}
+*/
+
+/*
+const hour = 19;
+const deManha = hour >= 6 && hour <= 11
+const deTarde = hour >= 12 && hour <= 17
+
+if(deManha) {
+  console.log('Bom dia!')
+} else if (deTarde) {
+  console.log('Boa Tarde!')
+} else {
+  console.log('Boa Noite!') 
 }
 */
 
@@ -74,18 +90,23 @@ if(horaAtual >= 6 && horaAtual <= 11) {
   - Agora, teste diferentes idades para se certificar que a condição do `if`  
     também está funcionando.
 */
-/*
-const myAge = 33;
-let freePass = ''
 
-if(myAge <= 7 || myAge >= 65) {
-  freePass = 'Para você, a entrada é grátis!'
+
+
+/*
+const idade = 65;
+const criancaOuIdoso = idade <= 7 || idade >= 65
+let message = null
+
+if(criancaOuIdoso) {
+  message = 'Para você, a entrada é grátis!'
 } else {
-  freePass = 'A entrada é R$ 30,00.'
+  message = 'A entrada é R$ 30,00.'
 }
 
-console.log(freePass)
+console.log(message)
 */
+
 
 
 
@@ -98,17 +119,23 @@ console.log(freePass)
   - Exiba o novo array no console;
   - O resultado deve ser: [34, 46, 90, 25, 11, 89, 76].
 */
+
+
+
 /*
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
-const newArrayNumbers = []
+let between11And90 = [] 
 
-for(let i = 0; i < numbers.length; i++) {
-  if(numbers[i] >= 11 && numbers[i] <= 90) {
-    newArrayNumbers.push(numbers[i])
-  }
+for (let i = 0; i <= numbers.length; i++) {
+  const number = numbers[i]
+  const isNumberBetween11And90 = number >= 11 && number <=90;
+  
+  if(isNumberBetween11And90) {
+    between11And90.push(number)
+  } 
 }
 
-console.log(newArrayNumbers)
+console.log(between11And90)
 */
 
 
@@ -116,9 +143,8 @@ console.log(newArrayNumbers)
 
 
 
-/*
-  05
 
+/*
   - O array "crazyArray" (abaixo) possui 3 tipos de dados: numbers, booleans  
     e strings;
   - Considerando este array, substitua os "X" da frase abaixo pelas informações  
@@ -129,28 +155,29 @@ console.log(newArrayNumbers)
   "O crazyArray tem X booleans, X números e X strings."
 */
 
+
 /*
+let isBoo = 0;
+let isNum = 0;
+let isStri = 0;
+
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
-let booleanCount = 0;
-let numberCount = 0;
-let stringCount = 0;
 
-for(let i = 0; i < crazyArray.length; i++) {
-  const isType = typeof crazyArray[i]
+for (let i = 0; i < crazyArray.length; i++) {
+  const isItemABoolean = typeof crazyArray[i] === 'boolean';
+  const isItemANumber = typeof crazyArray[i] === 'number';
 
-  if(isType === 'boolean') {
-    booleanCount++
-  } else if(isType === 'number') {
-    numberCount++
+  if(isItemABoolean) {
+    isBoo++;
+  } else if(isItemANumber) {
+    isNum++;
   } else {
-    stringCount++
+    isStri++;
   }
-
+  
 }
-
-console.log(`"O crazyArray tem ${booleanCount} booleans, ${numberCount} números e ${stringCount} strings."`)
+console.log(`O crazyArray tem ${isBoo} booleans, ${isNum} números e ${isStri} strings.`)
 */
-
 
 
 /*
@@ -170,23 +197,25 @@ console.log(`"O crazyArray tem ${booleanCount} booleans, ${numberCount} números
   "Numeros ímpares: XX, XX e XX. Números pares: XX, XX e XX."
 */
 
-/*
+
 const randomNumbers = [73, 4, 67, 10, 31, 58]
-const imparArray = [];
-const parArray = [];
 
+let pares = []
+let impares = []
 
-for(let i = 0; i < randomNumbers.length; i++){
+for (let i = 0; i < randomNumbers.length; i++) {
+  const numero = randomNumbers[i]
+  const isNumPar = numero % 2 == 0
 
-  if( randomNumbers[i]%2 === 0) {
-    parArray.push(randomNumbers[i])
-  } else {
-    imparArray.push(randomNumbers[i])
-  }
+    if(isNumPar) {
+     pares.push(numero)
+    } 
+    else {
+      impares.push(numero)
+    }
 }
-const imparMessage = imparArray.join(', ').replace(', 31',' e 31' )
-const parMessage = parArray.join(', ').replace(', 58',' e 58')
 
+const paresString = impares.join(', ').replace(', 3', ' e 3')
+const imparesString = pares.join(', ').replace(', 5', ' e 5')
 
-console.log(`Numeros ímpares: ${imparMessage}. Números pares: ${parMessage}.`)
-*/
+console.log(`Numeros ímpares: ${paresString}. Números pares: ${imparesString}.`)

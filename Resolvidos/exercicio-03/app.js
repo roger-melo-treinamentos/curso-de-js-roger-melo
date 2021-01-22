@@ -12,6 +12,8 @@
 
 let brazilianFoods = []
 
+//console.log(brazilianFoods)
+
 /*
 03 - Use o método adequado para adicionar os 3 seguintes itens ao array:
 
@@ -26,7 +28,6 @@ brazilianFoods.push('Coxinha', null, 'Brigadeiro')
 
 //console.log(brazilianFoods)
 
-
 /*
 04 - Comente o console.log acima e:
 
@@ -34,8 +35,8 @@ brazilianFoods.push('Coxinha', null, 'Brigadeiro')
 array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 - Exiba apenas o 2º item desse array no console.
 */
-let newWorld = 'Pão de Queijo'
-brazilianFoods[1] = newWorld 
+
+brazilianFoods[1] = "Pão de Queijo"
 
 //console.log(brazilianFoods[1])
 
@@ -52,10 +53,11 @@ número diretamente;
 mas sem digitar os nomes das comidas diretamente;
 - Exiba a foodsInfo no console.
 */
-const foodsInfo = `Até aqui, o array "brazilianFoods" possui ${brazilianFoods.length} itens: ${brazilianFoods.join(', ').replace(', B', ' e B')}`;
+
+const foodsInfo = 'Até aqui, o array "brazilianFoods" possui ' 
++ brazilianFoods.length + ' itens: ' + brazilianFoods[0]+ ', ' +brazilianFoods[1]+ ', e ' +brazilianFoods[2]
 
 //console.log(foodsInfo)
-
 
 /*
 06 - Comente o console.log acima e:
@@ -68,10 +70,12 @@ itens "Lilica" e "Matilda";
 "maleDogNames" e "femaleDogNames";
 - Exiba a "dogNames" no console.
 */
+
 const maleDogNames = ['Chico', 'Zeca']
 const femaleDogNames = ['Lilica', 'Matilda']
 
 let dogNames = maleDogNames.concat(femaleDogNames)
+
 //console.log(dogNames)
 
 /*
@@ -83,8 +87,8 @@ let dogNames = maleDogNames.concat(femaleDogNames)
 - O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
 
-//console.log(dogNames.join(', '))
 
+//console.log(dogNames.join(', '))
 
 /*
 08 - Comente o console.log acima e:
@@ -98,9 +102,10 @@ utilizando o método adequado para isso;
 - O console deve continuar exibindo o último item do array, que  
 agora é "Lilica".
 */
-
 dogNames.pop()
-//console.log(dogNames[dogNames.length -1])
+
+//console.log(dogNames[dogNames.length - 1])
+
 
 
 /*
@@ -115,11 +120,11 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Exiba a "initials" no console.
 */
 dogNames.push('Nina')
-const initials = `${dogNames[0].slice(0,1)+dogNames[1].slice(0,1)+dogNames[2].slice(0,1)+dogNames[3].slice(0,1)}`
+
+//const initials = `${dogNames[0].slice(0,1)}${dogNames[1].slice(0,1)}${dogNames[2].slice(0,1)}${dogNames[3].slice(0,1)}`
+const initials = `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[3][0]}`
 
 //console.log(initials)
-
-
 /*
 10 - Comente o console.log acima e:
 
@@ -142,14 +147,13 @@ digitada diretamente;
 - Exiba no console a string abaixo, substituindo "SOBREMESA" pela  
 constante que você criou.
 
-
 'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
 */
 
-const dessert = `${dogNames[0].slice(3,5)+dogNames[1].slice(2,4)+dogNames[3].slice(2,4).replace('n', 'd')}`
+const dessert = `${dogNames[0].slice(3)}${dogNames[1].slice(2)}${dogNames[3].slice(2).replace('n','d')}` 
+
 
 //console.log(`A ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`)
-
 /*
 12 - Comente o console.log acima e:
 
@@ -163,7 +167,8 @@ já tem, mais 4;
 - Agora, o resultado exibido no console deve ser 729.
 */
 
-let oddNumbers = [3,5,7];
-oddNumbers[1]+= 4
+let oddNumbers = [3,5,7]
+oddNumbers[1] +=4
+//console.log(oddNumbers[1]*oddNumbers[1]*oddNumbers[1])
+console.log(oddNumbers[1] ** 3)
 
-//console.log(oddNumbers[1]**3)

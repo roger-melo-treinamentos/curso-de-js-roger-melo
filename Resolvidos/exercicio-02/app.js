@@ -34,7 +34,8 @@ const tom = 'Tom'
 const firstTom = 'Hanks'
 const secondTom = 'Cruise'
 
-const myFavoriteTom = tom +' '+ firstTom
+const myFavoriteTom = tom+ " "+firstTom
+
 //console.log(myFavoriteTom)
 
 
@@ -48,7 +49,7 @@ const myFavoriteTom = tom +' '+ firstTom
 */
 
 const programmingLanguage = 'JavaScript'
-const js = programmingLanguage.slice(0, 1)+programmingLanguage.slice(4,5)
+const js = programmingLanguage[0] + programmingLanguage[4]
 
 //console.log(js)
 
@@ -61,29 +62,29 @@ const js = programmingLanguage.slice(0, 1)+programmingLanguage.slice(4,5)
 */
 
 const mozilla = 'Mozilla Developer Network'
-
-const mdn = mozilla.slice(0,1)+ mozilla.slice(8,9)+ mozilla.slice(18,19)
+const mdn = mozilla[0] + mozilla[8] + mozilla[18]
 
 //console.log(mdn)
-
 /*
 07 - Comente o console.log acima, e,
 
 - Exiba no console do browser a quantidade de caracteres que a constante "programmingLanguage" possui;
 */
-
 //console.log(programmingLanguage.length)
+
 
 /*
 08 - Comente o console.log acima, e,
 
 - Exiba no console a última letra da string que a "randomWord" (abaixo) armazena, mas com a condição a seguir;
-- Ao invés de inserir manualmente a posição do último caractere, faça com que a obtenção da última letra funcione para qualquer palavra que a "randomWord" receber;
+- Ao invés de inserir manualmente a posição do último caractere, faça com que a obtenção da última letra funcione
+ para qualquer palavra que a "randomWord" receber;
 - Dica: utilize a propriedade ".length".
 */
 
 let randomWord = 'Araponga'
-//console.log(randomWord.slice(randomWord.length -1))
+
+//console.log(randomWord[randomWord.length -1])
 
 /*
 09 - Comente o console.log acima, e,
@@ -96,6 +97,7 @@ let randomWord = 'Araponga'
 const summerMessage = 'O VERÃO CHEGA NESTE FIM DE SEMANA'
 
 //console.log(summerMessage.toLowerCase())
+
 /*
 10 - Comente o console.log acima, e,
 
@@ -105,6 +107,7 @@ const summerMessage = 'O VERÃO CHEGA NESTE FIM DE SEMANA'
 */
 
 const winterMessage = 'o inverno está chegando'
+
 //console.log(winterMessage.toUpperCase())
 
 /*
@@ -112,7 +115,6 @@ const winterMessage = 'o inverno está chegando'
 
 - Exiba, no console, o index do caractere "v" da "winterMessage";
 */
-
 //console.log(winterMessage.indexOf('v'))
 
 
@@ -144,7 +146,7 @@ const harryPotterAuthor = 'J.K. Rowling'
 */
 
 const bestMovie = 'E o Oscar de melhor filme vai para: "La la land"!'
-const realBestMovie = bestMovie.replace("La la land", "Moonlight")
+const realBestMovie = bestMovie.replace('La la land','Moonlight')
 
 //console.log(realBestMovie)
 
@@ -158,8 +160,6 @@ const realBestMovie = bestMovie.replace("La la land", "Moonlight")
 const reminder = 10%3
 
 //console.log(reminder)
-
-
 /*
 16 - Comente o console.log acima, e,
 
@@ -167,10 +167,12 @@ const reminder = 10%3
 - Após o incremento, exiba a let "episodes" no console;
 - O valor exibido no console deve ser 7.
 */
-let episodes = 6
-episodes++
-//console.log(episodes)
 
+let episodes = 6
+
+episodes++
+
+//console.log(episodes)
 
 /*
 17 - Comente o console.log acima, e,
@@ -180,6 +182,7 @@ episodes++
 - O valor exibido no console deve ser 6.
 */
 episodes--
+
 //console.log(episodes)
 
 
@@ -189,9 +192,10 @@ episodes--
 - Utilize o operador addition assignment para atualizar o valor da let "episodes" para 10;
 - Após a atribuição, exiba a let "episodes" no console.
 */
-episodes+=10
-//console.log(episodes)
 
+episodes +=4
+
+//console.log(episodes)
 
 /*
 19 - Comente o console.log acima, e,
@@ -200,7 +204,8 @@ episodes+=10
 - Insira a let "episodes" no lugar de "NUMERO_DE_EPISÓDIOS";
 - Exiba a "allEpisodes" no console.
 */
-let allEpisodes = 'O nº de episódios é: '+episodes
+
+const allEpisodes = 'O nº de episódios é: ' +episodes
 
 //console.log(allEpisodes)
 
@@ -214,11 +219,8 @@ let allEpisodes = 'O nº de episódios é: '+episodes
 - Não use template strings.
 */
 
-const bookMessage = '\'O Conto da Aia\' é um dos livros mais vendidos da década.'
+//const bookMessage = ' /'O Conto da Aia '/' ; ' é um dos livros mais vendidos da década.'
 //console.log(bookMessage)
-
-
-
 
 /*
 21 - Comente o console.log acima (e a const bookMessage caso não tenha descoberto a resolução), e,
@@ -232,7 +234,9 @@ const bookMessage = '\'O Conto da Aia\' é um dos livros mais vendidos da décad
 */
 
 const name = 'walter white'
-let newName = name.slice(0,6).replace('w', 'W')+' ' +name.slice(7).replace('w', 'W')
+
+let newName = name[0].toUpperCase() + name.slice(1,6) + ' '+ name[7].toUpperCase() + name.slice(8)
+
 //console.log(newName)
 
 /*
@@ -244,6 +248,6 @@ let newName = name.slice(0,6).replace('w', 'W')+' ' +name.slice(7).replace('w', 
 - Não modifique a string da const "name";
 - Exiba a "newName" no console;
 */
+newName = `${name[0].toUpperCase()}${name.slice(1,6)} ${name[7].toUpperCase()}${name.slice(8)}`
 
-newName = `${name.slice(0,6).replace('w', 'W')} ${name.slice(7).replace('w', 'W')}`
-console.log(newName)
+console.log (newName)
