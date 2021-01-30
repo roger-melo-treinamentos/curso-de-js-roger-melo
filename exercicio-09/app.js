@@ -13,15 +13,27 @@
     valor no console.
 */
 
-function convertToString (value) {
-  return String(value)
-}
+//function convertToString (value) {
+//  return String(value)
+//}
+
+/*
+const convertToString = value => String(value)
+
+console.log(convertToString(true))
+*/
 
 /*
   02
 
   - Crie uma função que retorne a quantidade de caracteres que uma string  
     recebida por parâmetro possui.
+*/
+
+/*
+const stringValue = value => value.length
+
+console.log(stringValue('ovo'))
 */
 
 /*
@@ -35,11 +47,24 @@ function convertToString (value) {
 */
 
 /*
+const inLowerCase = stringValue => stringValue.toLowerCase()
+
+console.log(inLowerCase("CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"))
+*/
+
+
+/*
   04
 
   - Crie uma função que recebe 2 parâmetros: um caractere e uma string;
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
+/*
+const charIndex = (char, string) => string.indexOf(char)
+
+console.log(charIndex('a', 'baralho'))
+*/
+
 
 /*
   05
@@ -47,6 +72,15 @@ function convertToString (value) {
   - Crie uma função que, ao ser invocada, retorna um boolean indicando se o item  
     passado por argumento existe no array (também passado por argumento).
 */
+
+
+/*
+const exists = (number, array) => array.includes(number)
+
+console.log(exists(5,[1,5,8,9]))
+
+*/
+
 
 /*
   06
@@ -56,6 +90,14 @@ function convertToString (value) {
 */
 
 /*
+const concatArrays = (array1, array2) => array1.concat(array2)
+
+
+console.log(concatArrays([1,2,3],[4,5,6]))
+*/
+
+
+/*
   07
 
   - Crie uma função que retorna o array passado como argumento em sua invocação,  
@@ -63,11 +105,29 @@ function convertToString (value) {
 */
 
 /*
+const arrayNumbers = array1 =>  {
+  array1.pop()
+  return array1
+}
+
+console.log(arrayNumbers([1,2,3,4,5,6]))
+*/
+
+
+
+/*
   08
 
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
 */
+/*
+const isNull = value => value === null
+
+console.log(isNull(null))
+*/
+
+
 
 /*
   09
@@ -79,6 +139,16 @@ function convertToString (value) {
     argumento a função que exibe seu nome no console e veja se o nome realmente  
     foi exibido.
 */
+/*
+const invokeCallback = callback => {
+  callback()
+}
+
+const myName = name => console.log('Davi Bernardo')
+
+invokeCallback(myName)
+*/
+
 
 /*
   10
@@ -92,6 +162,18 @@ function convertToString (value) {
 */
 
 /*
+const chamaCallback = (value, callback) => {
+  return callback(value)
+}
+
+const tripleOf = num => (num * 3)
+
+console.log(chamaCallback(33, tripleOf))
+*/
+
+
+
+/*
   11
 
   - Utilizando um forEach, baseado no array "numbers", a cada iteração, exiba a  
@@ -100,7 +182,20 @@ function convertToString (value) {
   "O Xº item do array [X, X, X] é X."
 */
 
+/*
 const numbers = [1, 2, 3]
+
+
+const showItems = (item, index, array) => {
+  const indexPosition = (index + 1)
+  const items = array.join(', ')
+
+  console.log(`O ${indexPosition}º item do array [${items}] é ${item}.`)
+}
+
+numbers.forEach(showItems)
+*/
+
 
 /*
   12
@@ -110,12 +205,24 @@ const numbers = [1, 2, 3]
     criada.
 */
 
+/*
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-for (let i = 0; i < letters.length; i++) {
-  lettersCopy.push(letters[i])
-}
+
+ letters.forEach((item) => {
+  lettersCopy.push(item)
+
+})
+
+console.log(lettersCopy)
+
+// for (let i = 0; i < letters.length; i++) {
+//  lettersCopy.push(letters[i])
+// }
+*/
+
+
 
 /*
   13
@@ -135,6 +242,7 @@ for (let i = 0; i < letters.length; i++) {
   </article>
 */
 
+/*
 const section = document.querySelector('[data-js="section"]')
 
 const review = [
@@ -146,7 +254,13 @@ const review = [
 
 let paragraphs = ''
 
+review.forEach(phrase => {
+  paragraphs+= `${`<p>${phrase}</p>`}`
+})
+
 section.innerHTML = paragraphs
+*/
+
 
 /*
   14
@@ -167,4 +281,31 @@ section.innerHTML = paragraphs
     "NOME_1, NOME_2 e mais X pessoas curtiram isso". O "X" deve ser substituído  
     pelo restante da quantidade de pessoas que curtiram o post (além das duas  
     pessoas já mencionadas no início da mensagem).
+*/
+
+/*
+const likePost = (names = []) => {
+
+  
+  switch(names.length) {
+
+    case 0: 
+      return `Ninguem curtiu isso`
+    
+    case 1: 
+      return `${names[0]} curtiu isso`
+
+    case 2: 
+      return `${names[0]} e ${names[1]} curtiram isso`  
+
+    case 3: 
+      return `${names[0]}, ${names[1]} e ${names[2]} curtiram isso` 
+
+    default:
+      return `${names[0]}, ${names[1]} e mais ${names.length -2} pessoas curtiram isso`
+
+  }
+}
+
+console.log(likePost(['Rafael', 'Beltrano', 'Ciclano', 'Fulano', 'Chico']))
 */

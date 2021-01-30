@@ -7,16 +7,14 @@
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
 /*
-function multiplicação (num1 = 0, num2 = 0) {
+function multiply (num1=0, num2=0) {
   return num1*num2
 }
 
-console.log(multiplicação(2,5))
+console.log(multiply(6,2))
 */
 
-
-
-/*
+/* 
   02
 
   - Faça o mesmo que o exercício acima pede, mas desta vez, implemente uma  
@@ -24,14 +22,12 @@ console.log(multiplicação(2,5))
     2 números.
 */
 /*
-const divisao = function (num1 = 0, num2 = 0) { 
+const division = function(num1 = 0, num2 = 0) {
   return num1/num2
 }
 
-console.log(divisao(10,2))
+console.log(division(16,2))
 */
-
-
 
 
 /*
@@ -46,16 +42,18 @@ console.log(divisao(10,2))
 
   "Esta é a Xª vez que essa string é exibida."
 */
+
 /*
-let message = function(value = 'Essa opção não pode estar em branco') {
+const log = function(value = `Você deve passar um valor`){
   console.log(value)
 }
 
-  for(let i = 0; i < 7; i++) {
-  counter = i+1
-  message(`Esta é a ${counter}ª vez que essa string é exibida.`)
-  }
+for(let i = 0; i < 7; i++){
+  let counter = i+1
+  log(`Esta é a ${counter}ª vez que essa string é exibida.`)
+}
 */
+
 
 
 
@@ -70,38 +68,28 @@ let message = function(value = 'Essa opção não pode estar em branco') {
     função.
 */
 
+/*
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
 
-/*
-function exibirArrayNovo (newArray = []){
-for(let i = 0; i < millennialWords.length; i++) {
-   newArray.push(millennialWords[i].toUpperCase())
-  }
-  return newArray
+const log = function(value = `Você deve passar um valor`){
+  console.log(value)
 }
 
-console.log(exibirArrayNovo())
-*/
 
-
-//-----  CORREÇÃO PROFESSOR ROGER ----->>>
-/*
-let message = function(value) {
-  console.log(value)}
-
-const transformToUppercase = function(array = []){
+const transformInUpperCase = function(array = []){
   let newArray = []
+  
   for(let i = 0; i < array.length; i++){
-    const wordInUpperCase = array[i].toUpperCase()
-    newArray.push(wordInUpperCase)
+    const WordInUpper = array[i].toUpperCase()
+
+    newArray.push(WordInUpper)
   }
   return newArray
 }
-const millennialWordsInUpperCase = transformToUppercase(millennialWords)
+const millWordsInUpper = transformInUpperCase(millennialWords)
 
-message(millennialWordsInUpperCase)
+log(millWordsInUpper)
 */
-
 
 
 
@@ -119,42 +107,31 @@ message(millennialWordsInUpperCase)
   "O array "randomNumbers" possui XX números, sendo XX positivos e XX negativos."
 */
 
+/*
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
-/*
-let positivos = 0;
-let negativos = 0;
-let total = 0;
 
-function positivoNegativo(number) {
-for(let i = 0; i < randomNumbers.length; i++){
-  if(randomNumbers[i] >= 0 ) { positivos++ } else { negativos++ }
-  total++
-    }
-  return console.log(`O array "randomNumbers" possui ${total} números, sendo ${positivos} positivos e ${negativos} negativos.`)
-}
+let positiveCounter = 0;
+let negativeCounter = 0;
 
-positivoNegativo()
-*/
-
-//-----  CORREÇÃO PROFESSOR ROGER ----->>>
-/*
-let positiveCount = 0;
-let negativeCount = 0;
-
-const isPositive = function (number = 0) {
-  return number >= 0
+const isPositive = function(number = 0){
+  return number >= 1 
 }
 
 for(let i = 0; i < randomNumbers.length; i++){
-  const isPositiveNumber = isPositive(randomNumbers[i])
+let isPositiveNumber = isPositive(randomNumbers[i])
+
   if(isPositiveNumber){
-    positiveCount++
-  } else { negativeCount++}
-
+    positiveCounter++
+  } else {
+    negativeCounter++
+  }
 }
 
-console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${positiveCount} positivos e ${negativeCount} negativos.`)
+console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${positiveCounter} positivos e ${negativeCounter} negativos.`)
 */
+
+
+
 
 /*
   06
@@ -167,20 +144,23 @@ console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, se
 */
 
 /*
-function getOddNumbers(OddNumbers = []) {
-  const newOddNumbers = []
+const getOddNumbers = function(numbers = []){
+  let newArray = []
 
-  for(let i = 0; i < OddNumbers.length; i++){
-    const isOddNumber = OddNumbers[i]%2 !== 0
+  for (let i = 0; i < numbers.length; i++){
+    let number = numbers[i]
+    const isOddNumber = (number % 2) !== 0
 
-    if(isOddNumber) { 
-      newOddNumbers.push(OddNumbers[i])
+    if(isOddNumber) {
+      newArray.push(number)
     }
   }
-  return newOddNumbers
+  return newArray
 }
+const onlyOddNumbers = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
 
-console.log(getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]))
+
+console.log(onlyOddNumbers)
 */
 
 
@@ -223,13 +203,13 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
-/*
+
 let sentence = ''
 
 for(let i = 0; i < functions.length; i++){
-let frase = `${functions[i]()} `
+  let frase = `${functions[i]()} `
+  
   sentence += frase
 }
 
 console.log(sentence)
-*/
