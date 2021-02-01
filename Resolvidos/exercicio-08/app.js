@@ -6,29 +6,27 @@
   - Previna que esses parâmetros recebam undefined;
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
-
 /*
-function multiply(num1 = 0, num2 = 0) {
+function multiply (num1=0, num2=0) {
   return num1*num2
 }
 
-console.log(multiply(2,5))
+console.log(multiply(6,2))
 */
 
-/*
+/* 
   02
 
   - Faça o mesmo que o exercício acima pede, mas desta vez, implemente uma  
     **function expression** que retorne o resultado da **divisão** entre esses  
     2 números.
 */
-
 /*
-const division = function (num1 = 0, num2 = 0) {
+const division = function(num1 = 0, num2 = 0) {
   return num1/num2
-} 
+}
 
-console.log(division(10,2))
+console.log(division(16,2))
 */
 
 
@@ -46,15 +44,16 @@ console.log(division(10,2))
 */
 
 /*
-const frase = function(message = 'Essa mensagem nao pode estar vazia') {
-  console.log(message)
+const log = function(value = `Você deve passar um valor`){
+  console.log(value)
 }
 
-for(let i = 0; i < 7; i++) {
-  const counter = i +1
-  frase(`Esta é a ${counter}ª vez que essa string é exibida.`)
+for(let i = 0; i < 7; i++){
+  let counter = i+1
+  log(`Esta é a ${counter}ª vez que essa string é exibida.`)
 }
 */
+
 
 
 
@@ -68,22 +67,35 @@ for(let i = 0; i < 7; i++) {
   - Exiba o novo array no console, sem inserir um console.log() dentro da  
     função.
 */
+
 /*
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
 
-const newFunction = function(array = []){
+const log = function(value = `Você deve passar um valor`){
+  console.log(value)
+}
+
+
+const transformInUpperCase = function(array = []){
   let newArray = []
   
   for(let i = 0; i < array.length; i++){
-    let number = array[i]
+    const WordInUpper = array[i].toUpperCase()
 
-    newArray.push(number.toUpperCase())
+    newArray.push(WordInUpper)
   }
   return newArray
 }
+const millWordsInUpper = transformInUpperCase(millennialWords)
 
-console.log(newFunction(millennialWords))
+log(millWordsInUpper)
 */
+
+
+
+
+
+
 /*
   05
 
@@ -96,28 +108,29 @@ console.log(newFunction(millennialWords))
 */
 
 /*
-
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 
-let positiveCount = 0
-let negativeCount = 0
+let positiveCounter = 0;
+let negativeCounter = 0;
 
-const isPositive = function(value) {
-  return value
+const isPositive = function(number = 0){
+  return number >= 1 
 }
 
 for(let i = 0; i < randomNumbers.length; i++){
-  let number = randomNumbers[i]
+let isPositiveNumber = isPositive(randomNumbers[i])
 
-  if(isPositive(number) > 0) {
-    positiveCount++
-  } else{
-    negativeCount++
+  if(isPositiveNumber){
+    positiveCounter++
+  } else {
+    negativeCounter++
   }
 }
 
-console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${positiveCount} positivos e ${negativeCount} negativos.`)
+console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, sendo ${positiveCounter} positivos e ${negativeCounter} negativos.`)
 */
+
+
 
 
 /*
@@ -131,24 +144,28 @@ console.log(`O array "randomNumbers" possui ${randomNumbers.length} números, se
 */
 
 /*
-
-const getOddNumbers = function(array = []){
+const getOddNumbers = function(numbers = []){
   let newArray = []
-  
-  for(let i = 0; i < array.length; i++){
-    let number = array[i]
-    let isOddNumber = number%2 !== 0
 
-    if(isOddNumber){
+  for (let i = 0; i < numbers.length; i++){
+    let number = numbers[i]
+    const isOddNumber = (number % 2) !== 0
+
+    if(isOddNumber) {
       newArray.push(number)
     }
   }
   return newArray
 }
-let allOddNumbers = (getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]))
+const onlyOddNumbers = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
 
-console.log(allOddNumbers)
+
+console.log(onlyOddNumbers)
 */
+
+
+
+
 
 /*
   07
@@ -187,10 +204,12 @@ const functions = [
   function () { return 'Ocidentais.' }
 ]
 
-let frase = ''
+let sentence = ''
 
 for(let i = 0; i < functions.length; i++){
-frase += `${functions[i]()} `
+  let frase = `${functions[i]()} `
+  
+  sentence += frase
 }
 
-console.log(frase)
+console.log(sentence)
