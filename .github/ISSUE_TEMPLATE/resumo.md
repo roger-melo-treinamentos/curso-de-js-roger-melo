@@ -1,8 +1,8 @@
 ---
-name: Aplicação
-about: Issues relacionadas às aplicações desenvolvidas no treinamento
-title: 'Aplicação: [NOME_DA_APLICAÇÃO]'
-labels: "\U0001F525aplicação"
+name: Resumo
+about: Issues relacionadas aos resumos das aulas
+title: Resumo da Aula Xxxxxxxxx da etapa XX
+labels: "\U0001F4C4resumo"
 assignees: ''
 
 ---
@@ -11,7 +11,7 @@ assignees: ''
 Antes de publicar a issue, lembre-se de clicar na aba "Preview", para visualizar se a formatação está correta =)
 -->
 
-<!-- Escreva após essa linha -->
+<!-- Escreva/insira as imagens após essa linha -->
 
 
 
