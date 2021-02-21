@@ -1,7 +1,7 @@
 ---
 name: "❓Dúvida"
 about: Esclarecimento de dúvidas
-title: Etapa X, Xxxxx - Aula XX-XX
+title: 'Etapa X, nome do vídeo: X'
 labels: "❓ dúvida"
 assignees: ''
 
@@ -9,7 +9,8 @@ assignees: ''
 
 <!--
 ATENÇÃO: Leia antes de postar sua dúvida.
--------------------------------------------
+-----------------------------------------------
+Primeiro, certifique-se de que você inseriu no título nome da etapa e nome do vídeo corretos. Isso facilita para mim na hora de lhe responder.
 
 Se você precisar adicionar trechos de código, coloque-os entre 3 crases, assim:
 
