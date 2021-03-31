@@ -24,7 +24,9 @@ Colocando 3 crases antes, 3 crases depois, o código aparecerá corretamente
 formatado. O "js" ali em cima é para que o código seja corretamente colorizado
 com base na linguagem JS.
 
-Antes de publicar a issue, lembre-se de clicar na aba "Preview", para visualizar se a formatação está correta =)
+Antes de publicar a issue, lembre-se de clicar na aba "Preview", para visualizar se a formatação está correta.
+
+Quanto mais específico você for, mais fácil será ajudá-lo(a) =)
 -->
 
 <!-- ESCREVA SUA DÚVIDA APÓS ESSA LINHA -->
