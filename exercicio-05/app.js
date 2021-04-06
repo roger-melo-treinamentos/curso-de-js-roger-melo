@@ -20,15 +20,15 @@
     4
     5
 */
-/*
-let i = 0;
 
-while(i <= 5) {
-  console.log(i)
-  i++
+// let num = 0
 
-}
-*/
+// while (num <= 5) {
+//   console.log(num)
+
+//   num++
+// }
+
 
 /*
   02 - Comente a declaração da let e o loop acima e:
@@ -36,12 +36,11 @@ while(i <= 5) {
   - Utilizando um for loop, faça o mesmo que foi pedido no exercício 01.
 */
 
+// for(let i = 0; i <= 5; i++) {
+//   console.log(i)
+// }
 
-/*
-for(let i = 0; i <= 5; i++){
-  console.log(i)
-}
-*/
+
 
 /*
   03 - Comente o loop acima e:
@@ -54,12 +53,10 @@ for(let i = 0; i <= 5; i++){
   "Esta é a Xª vez que esta frase é exibida no console."
 */
 
-/*
-for(let i = 1; i <= 10; i++) {
-  console.log(`Esta é a ${i}ª vez que esta frase é exibida no console.`)
-}
-*/
 
+// for(let i = 1; i <= 10; i++) {
+//   console.log(`Esta é a ${i}ª vez que esta frase é exibida no console.`)
+// }
 
 
 /*
@@ -72,17 +69,15 @@ for(let i = 1; i <= 10; i++) {
   - Para ver se deu certo, exiba o upperCaseCities no console.
 */
 
-
-/*
 const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
-let upperCaseCities = []
+
+const upperCaseCities = []
 
 for(let i = 0; i < cities.length; i++) {
-  upperCaseCities[i] = cities[i].toUpperCase()
-
+  upperCaseCities.push(cities[i].toUpperCase())
 }
-console.log(upperCaseCities)
-*/
+
+// console.log(upperCaseCities)
 
 
 /*
@@ -94,22 +89,17 @@ console.log(upperCaseCities)
     <li>João Grilo</li><li>Chicó</li><li>Rosinha</li>
 */
 
-
-/*
 const names = ['João Grilo', 'Chicó', 'Rosinha']
-let html = ''
+
+let HTML = ''
 
 for(let i = 0; i < names.length; i++) {
-
-  html += `<li>${names[i]}</li>`
+  HTML+= `<li>${names[i]}</li>`
 }
-console.log(html)
-*/
 
-
+// console.log(HTML)
 
 /*
-
   06 - Comente o console.log acima e:
 
   - Após a const numbers, utilize um for loop para somar todos os números do  
@@ -118,19 +108,16 @@ console.log(html)
   - O console deve exibir true.
 */
 
-
-/*
-let checkNumber = 337;
-let sumNumber = 0;
 const numbers = ['91', '5', '30', '97', '83', '31']
-  for(let i = 0; i < numbers.length; i++) {
-    sumNumber += Number(numbers[i])
+
+let sum = 0
+
+for(let i = 0; i < numbers.length; i++) {
+  sum+= Number(numbers[i])
 }
 
-console.log(sumNumber === checkNumber)
-*/
 
-
+// console.log(sum === 337)
 /*
   07 - Comente o console.log acima.
 
@@ -149,21 +136,15 @@ console.log(sumNumber === checkNumber)
   Dica: você pode colocar um loop dentro do outro, ou seja, aninhá-los. =)
 */
 
-/*
 const arrays = [
-  [4, 32, 8],
-  [64, 8, 32],
-  [8, 32, 16],
-  [2, 8, 4]
+  [4, 32, 8],   [64, 8, 32],   [8, 32, 16],   [2, 8, 4]
 ]
 
-let sumArrays = 0
-
-for(let i = 0; i < arrays.length; i++){
-    for(let j = 0; j < arrays[i].length; j++){
-      sumArrays+= arrays[i][j]
+let sumArray = 0
+for(let i = 0; i < arrays.length; i++) {
+  for (let x = 0; x < arrays[i].length; x++) {
+    sumArray+= arrays[i][x]
     }
 }
 
-console.log(sumArrays)
-*/
+// console.log(sumArray)

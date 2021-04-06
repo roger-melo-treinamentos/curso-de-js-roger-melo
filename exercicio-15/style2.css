@@ -1,0 +1,12 @@
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  max-width: 200px;
+  padding: 8px;
+  margin: 8px 0;
+  background: #eee;
+  border: 1px dotted #ddd;
+}

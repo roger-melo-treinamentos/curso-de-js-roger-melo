@@ -5,9 +5,7 @@
   - O resultado exibido no console deve ser: false true.
 */
 
-//console.log(!true, !false)
-
-
+// console.log(!true, !false)
 
 /*
   02
@@ -18,17 +16,13 @@
   - Se existir, exiba no console a mensagem "Existe um leão no array animals.".
 */
 
-/*
-const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
+// const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
 
-if(!animals.includes('leão')) {
-  console.log('Leão não existe no array animals.')
-} else {
-  console.log('Existe um leão no array animals.')
-}
-*/
-
-
+// if(!animals.includes('leão')) {
+//   console.log(' Leão não existe no array animals.')
+// } else {
+//   console.log(' Existe um leão no array animals.')
+// }
 
 /*
   03
@@ -41,23 +35,17 @@ if(!animals.includes('leão')) {
   "A soma ultrapassou 400. Até aqui, o valor atual é RESULTADO_DA_SOMA."
 */
 
+// const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
 
-/*
-const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
+// let arraySUM = 0
 
-let sumRandomNumbers = 0
-
-for(let i = 0; i < randomNumbers.length; i++) {
-  sumRandomNumbers += randomNumbers[i]
-
-  if(sumRandomNumbers > 400) {
-    break
-  }
-}
-console.log(`A soma ultrapassou 400. Até aqui, o valor atual é ${sumRandomNumbers}.`)
-*/
-
-
+// for(let i = 0; i < randomNumbers.length; i++) {
+//     if(arraySUM > 400) {
+//     console.log(`A soma ultrapassou 400. Até aqui, o valor atual é ${arraySUM}.`)
+//     break
+//   }
+//   arraySUM+= randomNumbers[i]
+// }
 
 
 
@@ -70,21 +58,20 @@ console.log(`A soma ultrapassou 400. Até aqui, o valor atual é ${sumRandomNumb
   - Exiba a frase no console.
 */
 
-/*
-const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
+// const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
 
-let newSentence = '';
+// let newPhrase = ''
 
-for(let i = 0; i < sentence.length; i++) {
-  if(sentence[i] === 'certeza') {
-    continue
-  }
-  newSentence+= `${sentence[i]} `
-}
-console.log(newSentence)
-*/
+// for(let i = 0; i < sentence.length; i++) {
+  
+//   if(sentence[i].includes('certeza')){
+//     continue
+//   }
+  
+//   newPhrase+= `${sentence[i]} `
+// }
 
-
+// console.log(newPhrase)
 
 
 /*
@@ -102,42 +89,45 @@ console.log(newSentence)
   "
 */
 
-const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
+// const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
 
-/*
-const randomStrings = []
-let totalIterations = 0
-let typeString = 0;
-let typeBoolean = 0;
+// let stringCount = 0
+// let booleanCount = 0
+// let totalCount = 0
 
-for(let i = 0; i < randomValues.length; i++){
-  const isValue = typeof randomValues[i]
 
-  if(isValue === 'string') {
-    randomStrings.push(randomValues[i])
-    typeString++
+// let stringInArray = []
 
-    if(typeString >= 4) {
-      break
-     }
-  }
-  if(isValue === 'boolean'){
-    typeBoolean++
-  }
+
+// for (let i = 0; i < randomValues.length; i++) {
   
-  totalIterations++
-}
-let fourStrings = randomStrings.join(', ').replace(', G', ' e G')
+//   if(typeof randomValues[i] === 'string') {
+//     stringInArray.push(randomValues[i])
+//     stringCount++
+
+//   } else if(typeof randomValues[i] === 'boolean') {
+//     booleanCount++
+//   }
+  
+//   totalCount++
+
+//   if(stringCount >= 4) {
+//     break
+//   }
+   
+// }
 
 
-console.log(
-  `3 informações sobre o array randomValues:
-    - As primeiras 4 strings são ${fourStrings};
-    - Até que as primeiras 4 strings fossem iteradas, ${typeBoolean} booleans foram iterados;
-    - O array foi iterado por ${totalIterations} vezes.`)
-*/
 
 
+// console.log(
+//   `
+//   3 informações sobre o array randomValues:
+//       - As primeiras 4 strings são ${stringInArray.join(', ')};
+//       - Até que as primeiras 4 strings fossem iteradas, ${booleanCount} booleans foram iterados;
+//       - O array foi iterado por ${totalCount} vezes.
+//   `
+// )
 
 
 /*
@@ -160,30 +150,26 @@ console.log(
     da bebida além da que você escolheu.
 */
 
-/*
-const drinkType = 'agua'
+// const drinkType = 'cafe'
 
-switch(drinkType) {
-  
-  case 'agua':
-       console.log('Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.')
-        break;
+// switch(drinkType) {
+//     case 'água':
+//     console.log('Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.')
+//     break;
 
-  case 'refrigerante':
-        console.log('Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar.')
-        break;
+//     case 'refrigerante':
+//     console.log('Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar.')  
+//     break;
 
-  case 'suco':
-        console.log('Bebida produzida do líquido extraído de frutos.')
-        break;
+//     case 'suco':
+//     console.log('Bebida produzida do líquido extraído de frutos.')  
+//     break;
 
-  default:
-        console.log('Bebida desconhecida.')
-        break;       
-}
-*/
+//     default:
+//     console.log('Bebida desconhecida.')
+//     break;
 
-
+// }
 
 /*
   07
@@ -193,7 +179,27 @@ switch(drinkType) {
     para testar o switch que você escreveu.
 */
 
-const a = 3
+const a = 0
+
+
+// switch(a) {
+
+//   case 0:
+//     console.log(`O valor de "a" é ${a}`)
+//     break;
+
+//   case 1:  
+//     console.log(`O valor de "a" é ${a}`)
+//     break;
+
+//   default:
+//     console.log(`O valor de "a" é qualquer número, exceto 0 e 1`)
+//     break;
+// }
+
+
+
+
 
 // if (a === 0) {
 //   console.log(`O valor de "a" é ${a}`)
@@ -202,17 +208,3 @@ const a = 3
 // } else {
 //   console.log('O valor de "a" é qualquer número, exceto 0 e 1')
 // }
-
-/*
-switch(a) {
-
-  case 0: console.log(`O valor de "a" é ${a}`)
-  break;
-
-  case 1: console.log(`O valor de "a" é ${a}`)
-  break;
-
-  default: console.log('O valor de "a" é qualquer número, exceto 0 e 1')
-  break;
-}
-*/

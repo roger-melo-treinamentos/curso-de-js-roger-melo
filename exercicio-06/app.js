@@ -25,15 +25,17 @@
 
 const fruits = ['morango', 'banana', 'mamão']
 
-/*
-if(fruits.includes('abacaxi')) {
-  console.log('A string "abacaxi" existe no array fruits.')
-} else if(fruits.includes('pera')) {
-  console.log('A string "pera" existe no array fruits.')
-} else {
-  console.log('Nem pera nem abacaxi existem no array "fruits".')
-}
-*/
+
+  // if(fruits.includes('abacaxi')){
+  //   console.log('A string "abacaxi" existe no array fruits.')
+  // } 
+  // else if(fruits.includes('pera')){
+  //   console.log('A string "pera" existe no array fruits.')
+  // } 
+  // else {
+  //   console.log('Nem pera nem abacaxi existem no array "fruits".')
+  // }
+ 
 
 /*
   02
@@ -48,16 +50,17 @@ if(fruits.includes('abacaxi')) {
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
 
-const horaAtual = 12
-/*
-if(horaAtual >= 6 && horaAtual <= 11) {
-  console.log('Bom dia!')
-} else if (horaAtual >= 12 && horaAtual <=17) {
-  console.log('Boa Tarde!')
-} else {
-  console.log('Boa Noite!')
-}
-*/
+// const hour = 18
+
+// if(hour >= 6 && hour <= 11) {
+//   console.log('B o m   d i a!')
+// } else if(hour >= 12 && hour <= 17) {
+//   console.log('B o a   T a r d e!')
+// } else {
+//   console.log('B o a   N o i t e!')
+// }
+
+
 
 
 
@@ -74,20 +77,17 @@ if(horaAtual >= 6 && horaAtual <= 11) {
   - Agora, teste diferentes idades para se certificar que a condição do `if`  
     também está funcionando.
 */
-/*
-const myAge = 33;
-let freePass = ''
 
-if(myAge <= 7 || myAge >= 65) {
-  freePass = 'Para você, a entrada é grátis!'
+let age = 34
+let entranceValue = ''
+
+if(age <= 7 || age >= 65) {
+  entranceValue = 'Para você, a entrada é grátis!'
 } else {
-  freePass = 'A entrada é R$ 30,00.'
+  entranceValue = 'A entrada é R$ 30,00.'
 }
 
-console.log(freePass)
-*/
-
-
+// console.log(entranceValue)
 
 
 /*
@@ -98,23 +98,17 @@ console.log(freePass)
   - Exiba o novo array no console;
   - O resultado deve ser: [34, 46, 90, 25, 11, 89, 76].
 */
-/*
+
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
-const newArrayNumbers = []
+const numbersBetween11And90 = []
 
 for(let i = 0; i < numbers.length; i++) {
-  if(numbers[i] >= 11 && numbers[i] <= 90) {
-    newArrayNumbers.push(numbers[i])
+  if(numbers[i] >= 11 && numbers[i] <=90) {
+    numbersBetween11And90.push(numbers[i])
   }
 }
 
-console.log(newArrayNumbers)
-*/
-
-
-
-
-
+// console.log(numbersBetween11And90)
 
 /*
   05
@@ -129,27 +123,25 @@ console.log(newArrayNumbers)
   "O crazyArray tem X booleans, X números e X strings."
 */
 
-/*
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
+
 let booleanCount = 0;
 let numberCount = 0;
-let stringCount = 0;
+let stringsCount = 0;
 
-for(let i = 0; i < crazyArray.length; i++) {
-  const isType = typeof crazyArray[i]
-
-  if(isType === 'boolean') {
+for(let i = 0; i <= crazyArray.length; i++){
+  let tipo = typeof crazyArray[i]
+  
+  if( tipo === 'boolean'){
     booleanCount++
-  } else if(isType === 'number') {
+  } else if (tipo === 'number'){
     numberCount++
-  } else {
-    stringCount++
+  } else if(tipo === 'string'){
+    stringsCount++
   }
-
 }
 
-console.log(`"O crazyArray tem ${booleanCount} booleans, ${numberCount} números e ${stringCount} strings."`)
-*/
+// console.log(`O crazyArray tem ${booleanCount} booleans, ${numberCount} números e ${stringsCount} strings.`)
 
 
 
@@ -170,23 +162,21 @@ console.log(`"O crazyArray tem ${booleanCount} booleans, ${numberCount} números
   "Numeros ímpares: XX, XX e XX. Números pares: XX, XX e XX."
 */
 
-/*
 const randomNumbers = [73, 4, 67, 10, 31, 58]
-const imparArray = [];
-const parArray = [];
 
+let oddNumbers = []
+let evenNumbers = []
 
 for(let i = 0; i < randomNumbers.length; i++){
-
-  if( randomNumbers[i]%2 === 0) {
-    parArray.push(randomNumbers[i])
+  let numero = randomNumbers[i]
+  
+  if(numero%2 === 0){
+    evenNumbers.push(numero)
   } else {
-    imparArray.push(randomNumbers[i])
+    oddNumbers.push(numero)
   }
 }
-const imparMessage = imparArray.join(', ').replace(', 31',' e 31' )
-const parMessage = parArray.join(', ').replace(', 58',' e 58')
 
-
-console.log(`Numeros ímpares: ${imparMessage}. Números pares: ${parMessage}.`)
-*/
+console.log(`
+Numeros ímpares: ${oddNumbers.join(', ').replace(', 3', ' e 3')}. 
+Números pares: ${evenNumbers.join(', ').replace(', 5', ' e 5')}.`)
