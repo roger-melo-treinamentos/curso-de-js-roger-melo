@@ -1,0 +1,78 @@
+body {
+  font-family: sans-serif;
+}
+
+.intro {
+  display: flex;
+}
+
+.typing {
+  position: relative;
+  margin-left: 10px;
+}
+
+.typing::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 95%;
+  border-right: 2px solid black;
+  right: -5px;
+  animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.accordion {
+  width: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 4px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background: #1f8dd6;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #54a0ff;
+  color: #f3f3f3;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-header.active {
+  background-color: #1070b1;
+}
+
+.accordion-header i {
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-header.active i {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  padding: 0 1rem;
+  background-color: #f3f3f3;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-body.active {
+  max-height: 10rem;
+  padding: 1rem;
+}
