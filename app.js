@@ -1,33 +1,36 @@
-const getTodos = callback => {
-  const request = new XMLHttpRequest()
+const getTodos = (url) =>  new Promise((resolve, reject) => {
+  const request = new XMLHttpRequest ()
   
   request.addEventListener('readystatechange', () => {
     const isRequestOk = request.readyState === 4 && request.status === 200
-    const isRequestNotOk = request.readyState === 4;
-    
+    const isRequestNotOk = request.readyState === 4
+
     if(isRequestOk){
       const data = JSON.parse(request.responseText)
-      callback (null, data)
-      return
-    }
-  
-    if(isRequestNotOk){
-      callback ('nao foi possivel', null)
+      resolve (`O pokemon escolhido é ${data.name}`)
+    } if(isRequestNotOk){
+      reject ('nao foi')
     }
   })
   
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todos')
+  request.open('GET', url)
   request.send()
-}
 
-getTodos((error, data) => {
-  console.log('callback executado')
-
-  if (error) {
-    console.log(error)
-    return
-  }
-  console.log(data)
 })
 
+getTodos('https://pokeapi.co/api/v2/pokemon/pikachu')
+ .then(pokemon => console.log(pokemon))
+ .catch(error => console.log(error))
 
+
+
+
+// getTodos('https://pokeapi.co/api/v2/pokemon/pikachu', (error, data) => {
+//   console.log(data)
+//   getTodos('https://pokeapi.co/api/v2/pokemon/bulbasaur', (error, data) => {
+//     console.log(data)
+//     getTodos('https://pokeapi.co/api/v2/pokemon/charmander', (error, data) => {
+//       console.log(data)
+//     })
+//   }) 
+// })

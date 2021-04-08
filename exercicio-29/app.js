@@ -65,11 +65,15 @@ getTodos('https://pokeapi.co/api/v2/pokemon/pikachu', (error, data) => {
   curso, onde falaremos sobre TDD. Vá se aquecendo =)
 */
 
-const numbers = [1,2,3]
+const map = (array, func) => {
+  let newArray = []
+  array.forEach (item => {
+    newArray.push(func(item))
+  })
+  return newArray
+}
 
-const double = numbers.map (um => um * 3)
-
-console.log(double)
+console.log(map ([1,2,3], number => number *2))
 
 /*
   03
@@ -80,10 +84,10 @@ console.log(double)
 
 const person = {
   name: 'Roger',
-  getName: () => this.name
-}
+  getName: () => person.name
+  }
 
-// console.log(person.getName())
+console.log(person.getName())
 
 /*
   04
@@ -95,7 +99,13 @@ const person = {
 */
 
 const x = 'x'
-// const x = 'y'
+
+const getX = () => {
+  const x = 'y'
+  return x
+}
+
+console.log(x,getX())
 
 /*
   05
@@ -104,12 +114,7 @@ const x = 'x'
     conseguir.
 */
 
-const getFullName = (user) => {
-  const firstName = user.firstName
-  const lastName = user.lastName
-
-  return `${firstName} ${lastName}`
-}
+const getFullName = ({firstName, lastName}) => `${firstName} ${lastName}`
 
 console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
 
@@ -126,6 +131,33 @@ console.log(getFullName({ firstName: 'Afonso', lastName: 'Solano' }))
     a mensagem 'Não temos o equivalente hexadecimal para COR';
   - Exiba o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
+
+const convertToHex = color => {
+  const colors = {
+    red: '#A31419',
+    green: '#A31419',
+    blue: '#A31419',
+    yellow: '#A31419',
+    purple: '#A31419',
+  }
+  return colors[color]
+  ?`O hexadecimal para a cor ${color} é ${colors[color]}`
+  : `Não temos o equivalente hexadecimal para ${color}`
+}
+
+const colors = [
+  'blue', 
+  'black', 
+  'red', 
+  'green', 
+  'pink', 
+  'yellow', 
+  'purple', 
+  'brown'
+]
+
+const logColorMessage = color => console.log(convertToHex(color))
+colors.forEach(logColorMessage)
 
 
 /*
@@ -151,3 +183,12 @@ const people = [
   { id: 9 , name: 'Gabriel', age: 20, federativeUnit: 'São Paulo' },
   { id: 73, name: 'Aline', age: 19, federativeUnit: 'Brasília' }
 ]
+
+const createOrIncremente = (acc, {age}) => {
+  acc[age] = acc[age] + 1 || 1
+  return acc
+}
+
+const agesFrequency = people.reduce (createOrIncremente, {})
+
+console.log(agesFrequency)
