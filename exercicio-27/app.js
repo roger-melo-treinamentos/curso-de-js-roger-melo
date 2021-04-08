@@ -149,7 +149,7 @@ booksBox.addBooks = booksQauntity => {
 }
 
 // console.log(booksBox.addBooks(1))
-console.log(booksBox.addBooks(4))
+console.log(booksBox.addBooks(3))
 console.log(booksBox.addBooks(3))
 
 

@@ -13,6 +13,36 @@
       executado quando o request anterior for finalizado.
 */
 
+const getTodos = (url, callback) => {
+  const request = new XMLHttpRequest ()
+  
+  request.addEventListener('readystatechange', () => {
+    const isRequestOk = request.readyState === 4 && request.status === 200
+    const isRequestNotOk = request.readyState === 4
+
+    if(isRequestOk){
+      const data = JSON.parse(request.responseText)
+      callback (null,`O pokemon escolhido é ${data.name}`)
+      return
+    } if(isRequestNotOk){
+      callback ('nao foi', null)
+    }
+  })
+  
+  request.open('GET', url)
+  request.send()
+
+}
+getTodos('https://pokeapi.co/api/v2/pokemon/pikachu', (error, data) => {
+  console.log(data)
+  getTodos('https://pokeapi.co/api/v2/pokemon/bulbasaur', (error, data) => {
+    console.log(data)
+    getTodos('https://pokeapi.co/api/v2/pokemon/charmander', (error, data) => {
+      console.log(data)
+    })
+  }) 
+})
+
 /*
   02
 
@@ -34,6 +64,12 @@
   Reforço: este tipo de exercício será frequente em etapas mais avançadas do 
   curso, onde falaremos sobre TDD. Vá se aquecendo =)
 */
+
+const numbers = [1,2,3]
+
+const double = numbers.map (um => um * 3)
+
+console.log(double)
 
 /*
   03
