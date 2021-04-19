@@ -10,7 +10,7 @@
 02 - Armazene um array vazio em uma let "brazilianFoods";
 */
 
-
+let brazilianFoods = []
 
 /*
 03 - Use o método adequado para adicionar os 3 seguintes itens ao array:
@@ -21,8 +21,8 @@
 
 - Exiba a brazilianFoods no console.
 */
-
-
+brazilianFoods.push('Coxinha', null, 'Brigadeiro')
+// console.log(brazilianFoods)
 
 /*
 04 - Comente o console.log acima e:
@@ -32,7 +32,8 @@ array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 - Exiba apenas o 2º item desse array no console.
 */
 
-
+brazilianFoods[1] = 'Pão de Queijo'
+// console.log(brazilianFoods[1])
 
 /*
 05 - Comente o console.log acima e:
@@ -47,7 +48,10 @@ mas sem digitar os nomes das comidas diretamente;
 - Exiba a foodsInfo no console.
 */
 
+const foodsInfo = `Até aqui, o array "brazilianFoods" possui ${brazilianFoods.length} itens:
+${brazilianFoods[0]}, ${brazilianFoods[1]} e ${brazilianFoods[2]}.`
 
+// console.log(foodsInfo)
 
 /*
 06 - Comente o console.log acima e:
@@ -61,7 +65,11 @@ itens "Lilica" e "Matilda";
 - Exiba a "dogNames" no console.
 */
 
+const maleDogNames = ['Chico', 'Zeca']
+const femaleDogNames = ['Lilica', 'Matilda']
 
+let dogNames = maleDogNames.concat(femaleDogNames)
+// console.log(dogNames)
 
 /*
 07 - Comente o console.log acima e:
@@ -72,7 +80,7 @@ itens "Lilica" e "Matilda";
 - O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
 
-
+// console.log(dogNames.join(', '))
 
 /*
 08 - Comente o console.log acima e:
@@ -87,7 +95,8 @@ utilizando o método adequado para isso;
 agora é "Lilica".
 */
 
-
+dogNames.pop()
+// console.log(dogNames[dogNames.length - 1])
 
 /*
 09 - Comente o console.log acima e:
@@ -101,7 +110,10 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Exiba a "initials" no console.
 */
 
+dogNames.push('Nina')
 
+const initials = `${dogNames[0][0]} ${dogNames[1][0]} ${dogNames[2][0]} ${dogNames[3][0]}`
+// console.log(initials)
 
 /*
 10 - Comente o console.log acima e:
@@ -110,7 +122,7 @@ apenas as letras iniciais dos nomes do array "dogNames";
 - Utilize o método adequado para isso.
 */
 
-
+// console.log(initials.toLocaleLowerCase())
 
 /*
 11 - Comente o console.log acima e:
@@ -127,8 +139,10 @@ constante que você criou.
 
 'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
 */
+// console.log(dogNames)
 
-
+const dessert = `${dogNames[0].slice(3)}${dogNames[2].slice(4)}${dogNames[3].slice(2).replace('n', 'd')}`
+// console.log(`A ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`)
 
 /*
 12 - Comente o console.log acima e:
@@ -142,3 +156,7 @@ elevado ao cubo, faça o 2º item do array receber todo o valor que ele
 já tem, mais 4;
 - Agora, o resultado exibido no console deve ser 729.
 */
+
+let oddNumbers = [3, 5, 7]
+oddNumbers[1] += 4
+console.log(oddNumbers[1] ** 3)
