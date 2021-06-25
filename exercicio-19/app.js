@@ -20,4 +20,5 @@ Depois de fazer o que foi pedido acima, crie um repositório no GitHub para a su
 Link do repositório do curso: https://github.com/roger-melo-treinamentos/curso-de-js-roger-melo/issues
 
 Ps: se você não conseguiu fazer tudo o que foi pedido acima, abra a issue mesmo assim =)
+Ps2: o uso do Bootstrap (ou qualquer outra lib CSS) é opcional.
 */
