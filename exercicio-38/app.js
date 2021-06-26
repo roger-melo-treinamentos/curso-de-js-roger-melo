@@ -190,8 +190,8 @@ const clock = new ExtendedClock({ template: 'h:m:s', precision: 1000 })
     - A <div> com a classe "container" abaixo da div que você acabou de 
       comentar;
     - A <link> que importa o style.css;
-  - Construa uma aplicação de conversão de conversão de moedas. O HTML e CSS 
-    são os que você está vendo no browser (após salvar os arquivos);
+  - Construa uma aplicação de conversão de moedas. O HTML e CSS são os que 
+    você está vendo no browser (após salvar os arquivos);
   - Você poderá modificar a marcação e estilos da aplicação depois. No momento, 
     concentre-se em executar o que descreverei abaixo;
     - Quando a página for carregada: 
