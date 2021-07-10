@@ -1,4 +1,4 @@
-name: 🔥Aplicações - TESTANDO, NÃO USE
+name: 🔥Aplicações
 description: Issues relacionadas às aplicações desenvolvidas no treinamento
 title: "Aplicação: [NOME_DA_APLICAÇÃO]"
 labels: [🔥aplicação]
@@ -14,10 +14,40 @@ body:
         - Não
     validations:
       required: true
+  - type: dropdown
+    id: functionality-check
+    attributes:
+      label: A aplicação contém funcionalidades que não foram mostradas nas aulas?
+      options:
+        - Sim
+        - Não
+    validations:
+      required: true
+  - type: dropdown
+    id: language-features-check
+    attributes:
+      label: A aplicação contém features da linguagem que não foram mostradas nas aulas?
+      options:
+        - Sim
+        - Não
+    validations:
+      required: true
   - type: input
     id: repo-link
     attributes:
       label: Link do repositório da sua aplicação
       placeholder: Insira aqui o link do repositório da sua aplicação
+    validations:
+      required: true
+  - type: textarea
+    id: obstacles
+    attributes:
+      label: Suas maiores dificuldades durante a implementação
+    validations:
+      required: true
+  - type: textarea
+    id: easiness
+    attributes:
+      label: Suas menores dificuldades durante a implementação
     validations:
       required: true
