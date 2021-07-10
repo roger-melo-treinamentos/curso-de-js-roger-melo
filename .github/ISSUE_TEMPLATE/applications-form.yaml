@@ -1,0 +1,23 @@
+name: 🔥Aplicações - TESTANDO, NÃO USE
+description: Issues relacionadas às aplicações desenvolvidas no treinamento
+title: "Aplicação: [NOME_DA_APLICAÇÃO]"
+labels: [🔥aplicação]
+assignees:
+  - @Roger-Melo
+body:
+  - type: dropdown
+    id: colors-check
+    attributes:
+      label: As cores da sua versão da aplicação são diferentes das cores da aplicação mostrada na aula?
+      options:
+        - Sim
+        - Não
+    validations:
+      required: true
+  - type: input
+    id: repo-link
+    attributes:
+      label: Link do repositório da sua aplicação
+      placeholder: Insira aqui o link do repositório da sua aplicação
+    validations:
+      required: true
