@@ -3,7 +3,7 @@ description: Issues relacionadas às aplicações desenvolvidas no treinamento
 title: "Aplicação: [NOME_DA_APLICAÇÃO]"
 labels: [🔥aplicação]
 assignees:
-  - @Roger-Melo
+  - Roger-Melo
 body:
   - type: dropdown
     id: colors-check
