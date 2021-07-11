@@ -35,7 +35,7 @@ body:
   - type: input
     id: repo-link
     attributes:
-      label: Link do repositório da sua aplicação
+      label: Link do repositório da aplicação
       placeholder: Insira aqui o link do repositório da sua aplicação
     validations:
       required: true
