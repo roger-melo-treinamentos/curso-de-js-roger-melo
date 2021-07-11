@@ -42,12 +42,12 @@ body:
   - type: textarea
     id: obstacles
     attributes:
-      label: Suas maiores dificuldades durante a implementação
+      label: Maiores dificuldades durante a implementação
     validations:
       required: true
   - type: textarea
     id: easiness
     attributes:
-      label: Suas menores dificuldades durante a implementação
+      label: Menores dificuldades durante a implementação
     validations:
       required: true
