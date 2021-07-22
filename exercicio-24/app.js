@@ -28,8 +28,8 @@ const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462]
   03
 
   - Refatore a implementação da remoção do to-do (li) da tela;
-  - Tente implementar essa remoção sem "navegar pelo DOM" usando propriedades
-    como a parentElement.
+  - Tente implementar essa remoção sem "navegar pelo DOM". Ou seja, sem usar 
+    propriedades como a parentElement.
     
     Por que? 
 
