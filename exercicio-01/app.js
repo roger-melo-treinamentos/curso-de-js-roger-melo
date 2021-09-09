@@ -1,5 +1,3 @@
-
-
 /*
 01 - Neste diretório (exercicio-01), há um index.html vazio.
 
@@ -19,7 +17,10 @@ Faça o seguinte:
 /*
 03 - Para certificar-se que este arquivo realmente está linkado, exiba a frase  
 "JS is Awesome!" em um alert no browser.
+*/
+// alert('JS is Awesome')
 
+/*
 Como mencionei durante a aula: não se preocupe em entender 100% o que os comandos  
 "alert" e "console" fazem. Nós falaremos sobre eles mais à frente =)
 
@@ -27,16 +28,7 @@ Utilize os espaços entre os comentários abaixo para executar os códigos dos
 exercícios. Inclusive o alert mencionado acima.
 */
 
-alert("JS is Awesome!") 
 
-const myBirthYear = 1988
-const currentYear = 2020
-
-console.log(myBirthYear, currentYear);
-
-const myAge =  currentYear - myBirthYear;
-
-console.log(myAge);
 
 /*
 04 - Comente o alert que você escreveu acima, utilizando o comentário de uma linha.
@@ -47,13 +39,21 @@ console.log(myAge);
 dígitos. Ex.: 1930.
 */
 
+const myBirthYear = 1988
+
+
 /*
 06 - Declare uma const "currentYear", que recebe o ano atual, com 4 dígitos.
 */
 
+const currentYear = 2021
+
+
 /*
 07 - Exiba as const "myBirthYear" e "currentYear", lado a lado, no console do browser.
 */
+
+console.log(myBirthYear, currentYear)
 
 /*
 08 - Experimente.
@@ -66,7 +66,9 @@ acontece.
 
 - Exiba a "myAge" no console.
 */
-const ten = 10
+const currentAge = currentYear - myBirthYear
+
+console.log(`my age is: ${ currentAge}`)
 
 /*
 09 - Antes do console.log abaixo, declare uma const "ten", que recebe o número  
@@ -81,8 +83,10 @@ const ten = 10
 Não se assuste com as crases e os cifrões. Conversaremos mais sobre operações  
 matemáticas e strings (textos) em breve =)
 */
+console.log(`Em ${currentYear + 10}, estarei com ${currentAge + 10} anos.`)
 
- console.log(`Em ${currentYear + ten}, estarei com ${myAge + ten} anos.`)
+const ten = 10
+
 
 /*
 10 - Abra o site abaixo no browser e faça o seguinte:
