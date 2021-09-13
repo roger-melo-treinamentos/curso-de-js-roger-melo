@@ -36,7 +36,7 @@ const numbers = [979, 2673, 41, 77, 276, 554, 399, 385, 65, 726, 635, 833, 462]
     Se futuramente a marcação HTML da aplicação mudar, se o parentElement mudar, 
     o código que foi implementado não funcionará.
     
-    Dica: pesquise por dataset.
+    Dica: pesquise por dataset e atributos data.
 */
 
 /*
