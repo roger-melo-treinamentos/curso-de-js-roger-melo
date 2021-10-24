@@ -57,8 +57,12 @@ body:
         const myConst2 = 'y'
         ```
 
-        Colocando 3 crases antes e 3 crases depois, o código será formatado corretamente.  
-        O "js" ali em cima é para que o código seja colorizado com base em JS.
+        Colocando 3 crases antes e 3 crases depois, o código bloco de código será 
+        formatado corretamente. O "js" ali em cima é para que o código seja 
+        colorizado com base em JavaScript. 
+        
+        Se precisar usar HTML ou CSS, basta substituir "js" pelo nome da 
+        linguagem. 
 
         Antes de publicar a issue, lembre-se de clicar na aba "Preview", para visualizar se a formatação está correta.
 
