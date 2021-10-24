@@ -48,7 +48,7 @@ body:
     id: question
     attributes:
       label: Descreva a dúvida
-      description: |
+      value: |
         <!--
         Se você precisar adicionar trechos de código, coloque-os entre 3 crases, assim:
 
