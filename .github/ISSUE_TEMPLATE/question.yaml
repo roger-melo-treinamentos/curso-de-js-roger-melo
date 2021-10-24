@@ -1,6 +1,6 @@
 name: ❓Dúvida
 description: Esclarecimento de dúvidas
-labels: [❓dúvida]
+labels: [❓ dúvida]
 body:
   - type: dropdown
     id: module-check
