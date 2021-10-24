@@ -5,7 +5,7 @@ body:
   - type: dropdown
     id: module-check
     attributes:
-      label: Qual é a etapa?
+      label: Etapa da aula
       options:
         - 01
         - 02
@@ -33,14 +33,14 @@ body:
   - type: input
     id: lesson-check
     attributes:
-      label: Qual é o nome da aula?
+      label: Nome da aula
       placeholder: Arrow functions - Aula 02-02
     validations:
       required: true
   - type: input
     id: link-check
     attributes:
-      label: Qual é o link da aula?
+      label: Link da aula
       placeholder: https://app.nutror.com/v3/curso/x/cjrm/aula/123
     validations:
       required: true
