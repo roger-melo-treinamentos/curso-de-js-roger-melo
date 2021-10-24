@@ -12,4 +12,3 @@ Antes de publicar a issue, lembre-se de clicar na aba "Preview", para visualizar
 -->
 
 <!-- Escreva/insira as imagens após essa linha -->
-
