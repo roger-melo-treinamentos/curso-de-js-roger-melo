@@ -218,4 +218,7 @@ const clock = new ExtendedClock({ template: 'h:m:s', precision: 1000 })
       API: https://www.exchangerate-api.com/;
       - Para obter a key e fazer requests, você terá que fazer login e escolher
         o plano free. Seus dados de cartão de crédito não serão solicitados.
+  
+  PS: o desafio aqui é você implementar essa aplicação sozinho(a) e enviá-la 
+  para análise antes de ver as próximas aulas, ok? =)
 */
