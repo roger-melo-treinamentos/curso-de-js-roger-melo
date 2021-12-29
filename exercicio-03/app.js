@@ -9,8 +9,8 @@
 /*
 02 - Armazene um array vazio em uma let "brazilianFoods";
 */
-let brazilianFoods = []
 
+let brazilianFoods = []
 
 /*
 03 - Use o método adequado para adicionar os 3 seguintes itens ao array:
@@ -21,9 +21,11 @@ let brazilianFoods = []
 
 - Exiba a brazilianFoods no console.
 */
+
 brazilianFoods.push('Coxinha', 'null', 'Brigadeiro')
 
 console.log(brazilianFoods);
+
 /*
 04 - Comente o console.log acima e:
 
@@ -49,7 +51,7 @@ mas sem digitar os nomes das comidas diretamente;
 */
 
 const foodsInfo = `Até aqui, o  
-array "brazilianFoods" possui ${brazilianFoods.length} itens: ${brazilianFoods.join(", ").replace('o,', 'o e')}.`
+array "brazilianFoods" possui ${brazilianFoods.length} itens: ${brazilianFoods[0]}, ${brazilianFoods[1]} e ${brazilianFoods[2]}.`
 
 console.log(foodsInfo);
 /*
