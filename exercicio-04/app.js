@@ -14,7 +14,8 @@
 */
 
 const my3FavoriteTVShows = ['naruto', 'transform', 'evangeleon']
-const sentence = my3FavoriteTVShows.join(', ').replace('m,', 'm e')
+const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', ')}`
+  .replace('m,', 'm e')
 console.log(sentence);
 /*
   02 - Comente o console.log() acima e:
@@ -68,8 +69,8 @@ console.log(typeSentence);
   "A string que a "typeSentence" armazena tem mais de NÚMERO_DE_CARACTERES  
   caracteres? BOOLEAN."
 */
-const number = 39
-console.log(`A string que a "typeSentence" armazena tem mais de ${number} caracteres? ${typeSentence.length > number}.`);
+const numberToCheck = 39
+console.log(`A string que a "typeSentence" armazena tem mais de ${numberToCheck} caracteres? ${String(typeSentence.length > numberToCheck).replace('t', 'T')}.`);
 
 /*
   06 - Comente o console.log() acima e:
@@ -94,7 +95,7 @@ console.log(`Todos os ${falsyValues.length} itens do array "falsyValues" são fa
 */
 const crazyOperation = null + 1
 
-const crazyConversion =  Boolean(crazyOperation)
+const crazyConversion = Boolean(crazyOperation)
 
 console.log(crazyConversion, 'pois null + 1 é igual a 1 e 1 nao é falsy');
 
@@ -127,7 +128,7 @@ console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a ${age
   - Exiba a "isNotAString" no console.
 */
 
-const isNotAString = 'string' === typeof randomTVShow
+const isNotAString = 'string' !== typeof randomTVShow
 console.log(isNotAString);
 
 /*
@@ -140,4 +141,4 @@ console.log(isNotAString);
 
 const evenNumbers = [0, 2, 4, 6, 8, 10]
 
-console.log(evenNumbers.indexOf(8));
+console.log(evenNumbers.indexOf(8) !== -1);
