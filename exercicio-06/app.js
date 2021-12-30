@@ -45,10 +45,8 @@ if (fruits.includes("abacaxi")) {
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
 const hour = 5
-
 const isMorning = hour >= 6 && hour <= 11
 const isAfternoon = hour >= 12 && hour <= 17
-
 
 if (isMorning) {
   console.log("Bom dia!");
@@ -71,7 +69,6 @@ if (isMorning) {
     também está funcionando.
 */
 const myAge = 30
-
 let priceMessage = null
 
 const isChild = myAge <= 7
@@ -157,9 +154,7 @@ console.log(`O crazyArray tem ${booleanAmount} booleans, ${numberAmount} número
 */
 
 const randomNumbers = [73, 4, 67, 10, 31, 58]
-
 const oddNumbers = []
-
 const evenNumbers = []
 
 for (let index = 0; index < randomNumbers.length; index++) {
