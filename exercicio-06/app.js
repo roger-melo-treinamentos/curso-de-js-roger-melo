@@ -26,7 +26,7 @@
 const fruits = ['morango', 'banana', 'mamão']
 
 if (fruits.includes("abacaxi")) {
-console.log("A string \"abacaxi\" existe no array fruits.");
+  console.log("A string \"abacaxi\" existe no array fruits.");
 } else if (fruits.includes("pera")) {
   console.log("A string \"pera\" existe no array fruits.");
 } else {
@@ -44,15 +44,18 @@ console.log("A string \"abacaxi\" existe no array fruits.");
   Obs.: tanto a expressão do lado esquerdo quanto a do lado direito do operador  
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
-const hour = 6
+const hour = 5
+
+const isMorning = hour >= 6 && hour <= 11
+const isAfternoon = hour >= 12 && hour <= 17
 
 
-if (hour >= 18) {
-  console.log("Boa noite!");
-} else if (hour >= 12) {
+if (isMorning) {
+  console.log("Bom dia!");
+} else if (isAfternoon) {
   console.log("Boa tarde!");
 } else {
-  console.log("Bom dia!");
+  console.log("Boa noite!");
 }
 /*
   03
@@ -69,11 +72,18 @@ if (hour >= 18) {
 */
 const myAge = 30
 
-if (myAge <= 7 || myAge >= 65) {
-  console.log("Para você, a entrada é grátis!");
+let priceMessage = null
+
+const isChild = myAge <= 7
+const isOlder = myAge >= 65
+
+if (isChild || isOlder) {
+  priceMessage = "Para você, a entrada é grátis!"
 } else {
-console.log("A entrada é R$ 30,00.");
+  priceMessage = "A entrada é R$ 30,00."
 }
+
+console.log(priceMessage);
 /*
   04
 
@@ -84,16 +94,18 @@ console.log("A entrada é R$ 30,00.");
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
-
-const newNumbers = []
+let numbersBetween11and90 = []
 
 for (let index = 0; index < numbers.length; index++) {
-  if (numbers[index] > 11 && numbers[index] < 90) {
-     newNumbers.push(numbers[index])
-  } 
+  const number = numbers[index]
+  const isNumberBetween11and90 = number > 11 && number < 90
+
+  if (isNumberBetween11and90) {
+    numbersBetween11and90.push(number)
+  }
 }
 
-console.log(newNumbers);
+console.log(numbersBetween11and90);
 
 /*
   05
@@ -109,24 +121,24 @@ console.log(newNumbers);
 */
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
-
-const numberArray = []
-
-const stringArray = []
-
-const booleansArray = []
+let numberAmount = 0
+let stringAmount = 0
+let booleanAmount = 0
 
 for (let index = 0; index < crazyArray.length; index++) {
-  if (typeof crazyArray[index] === 'number') {
-    numberArray.push(crazyArray[index])
-  } else if (typeof crazyArray[index] === 'string') {
-    stringArray.push(crazyArray[index])
+  const typeOfItem = typeof crazyArray[index]
+  const isItemANumber = typeOfItem === 'number'
+  const isItemABoolean = typeOfItem === 'boolean'
+  if (isItemANumber) {
+    numberAmount++
+  } else if (isItemABoolean) {
+    booleanAmount++
   } else {
-    booleansArray.push(crazyArray[index])
+    stringAmount++
   }
 }
 
-console.log(`O crazyArray tem ${booleansArray.length} booleans, ${numberArray.length} números e ${stringArray.length} strings.`);
+console.log(`O crazyArray tem ${booleanAmount} booleans, ${numberAmount} números e ${stringAmount} strings.`);
 /*
   06
 
@@ -146,16 +158,21 @@ console.log(`O crazyArray tem ${booleansArray.length} booleans, ${numberArray.le
 
 const randomNumbers = [73, 4, 67, 10, 31, 58]
 
-const oddNumbersString = []
+const oddNumbers = []
 
-const evenNumbersString = []
+const evenNumbers = []
 
 for (let index = 0; index < randomNumbers.length; index++) {
-  if (randomNumbers[index] % 2 === 0) {
-    evenNumbersString.push(randomNumbers[index])
+  const number = randomNumbers[index]
+  const isEvenNumber = number % 2 === 0
+
+  if (isEvenNumber) {
+    evenNumbers.push(number)
   } else {
-    oddNumbersString.push(randomNumbers[index])
+    oddNumbers.push(number)
   }
 }
 
-console.log(`Numeros ímpares: ${oddNumbersString.join(', ').replace('7,', '7 e')}. Números pares: ${evenNumbersString.join(', ').replace('0,' , '0 e')}.`);
+const oddNumbersString = oddNumbers.join(', ').replace(', 3', ' e 3')
+const evenNumbersString = evenNumbers.join(', ').replace(', 5', ' e 5')
+console.log(`Numeros ímpares: ${oddNumbersString}. Números pares: ${evenNumbersString}.`);
