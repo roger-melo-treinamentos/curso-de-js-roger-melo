@@ -48,7 +48,7 @@ for (let i = 0; i <= 5; i++) {
   "Esta é a Xª vez que esta frase é exibida no console."
 */
 
-for (var i = 0; i <= 10; i++) {
+for (let i = 0; i <= 10; i++) {
   // console.log(`Esta é a ${i}ª vez que esta frase é exibida no console.`);
 }
 
@@ -67,7 +67,7 @@ const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
 let upperCaseCities = []
 
 for (let index = 0; index < cities.length; index++) {
-  upperCaseCities.push(cities[index])
+  upperCaseCities.push(cities[index].toLocaleUpperCase())
 }
 console.log(upperCaseCities);
 /*
@@ -80,11 +80,11 @@ console.log(upperCaseCities);
 */
 
 const names = ['João Grilo', 'Chicó', 'Rosinha']
-let template = ''
+let HTMLTemplate = ''
 for (let index = 0; index < names.length; index++) {
-  template +='<li>' + names[index]+ '</li>';
+  HTMLTemplate += `<li>${names[index]}</li>`;
 }
-console.log(template);
+console.log(HTMLTemplate);
 /*
   06 - Comente o console.log acima e:
 
@@ -95,11 +95,11 @@ console.log(template);
 */
 
 const numbers = ['91', '5', '30', '97', '83', '31']
-let totalNumbers = 0
+let sum = 0
 for (let index = 0; index < numbers.length; index++) {
-  totalNumbers += Number(numbers[index])
+  sum += Number(numbers[index])
 }
-console.log(totalNumbers);
+console.log(sum);
 /*
   07 - Comente o console.log acima.
 
@@ -125,11 +125,11 @@ const arrays = [
   [2, 8, 4]
 ]
 
-let total = 0
+let arraysSum = 0
 for (let i = 0; i < arrays.length; i++) {
   for (let j = 0; j < arrays[i].length; j++) {
-    total += arrays[i][j]
+    arraysSum += arrays[i][j]
   }
-  
+
 }
-console.log(total);
+console.log(arraysSum);
