@@ -25,6 +25,13 @@
 
 const fruits = ['morango', 'banana', 'mamão']
 
+if (fruits.includes("abacaxi")) {
+console.log("A string \"abacaxi\" existe no array fruits.");
+} else if (fruits.includes("pera")) {
+  console.log("A string \"pera\" existe no array fruits.");
+} else {
+  console.log("Nem pera nem abacaxi existem no array \"fruits\".");
+}
 /*
   02
 
@@ -37,7 +44,16 @@ const fruits = ['morango', 'banana', 'mamão']
   Obs.: tanto a expressão do lado esquerdo quanto a do lado direito do operador  
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
+const hour = 6
 
+
+if (hour >= 18) {
+  console.log("Boa noite!");
+} else if (hour >= 12) {
+  console.log("Boa tarde!");
+} else {
+  console.log("Bom dia!");
+}
 /*
   03
 
@@ -51,7 +67,13 @@ const fruits = ['morango', 'banana', 'mamão']
   - Agora, teste diferentes idades para se certificar que a condição do `if`  
     também está funcionando.
 */
+const myAge = 30
 
+if (myAge <= 7 || myAge >= 65) {
+  console.log("Para você, a entrada é grátis!");
+} else {
+console.log("A entrada é R$ 30,00.");
+}
 /*
   04
 
@@ -62,6 +84,16 @@ const fruits = ['morango', 'banana', 'mamão']
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
+
+const newNumbers = []
+
+for (let index = 0; index < numbers.length; index++) {
+  if (numbers[index] > 11 && numbers[index] < 90) {
+     newNumbers.push(numbers[index])
+  } 
+}
+
+console.log(newNumbers);
 
 /*
   05
@@ -78,6 +110,23 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
 
+const numberArray = []
+
+const stringArray = []
+
+const booleansArray = []
+
+for (let index = 0; index < crazyArray.length; index++) {
+  if (typeof crazyArray[index] === 'number') {
+    numberArray.push(crazyArray[index])
+  } else if (typeof crazyArray[index] === 'string') {
+    stringArray.push(crazyArray[index])
+  } else {
+    booleansArray.push(crazyArray[index])
+  }
+}
+
+console.log(`O crazyArray tem ${booleansArray.length} booleans, ${numberArray.length} números e ${stringArray.length} strings.`);
 /*
   06
 
@@ -96,3 +145,17 @@ const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false
 */
 
 const randomNumbers = [73, 4, 67, 10, 31, 58]
+
+const oddNumbersString = []
+
+const evenNumbersString = []
+
+for (let index = 0; index < randomNumbers.length; index++) {
+  if (randomNumbers[index] % 2 === 0) {
+    evenNumbersString.push(randomNumbers[index])
+  } else {
+    oddNumbersString.push(randomNumbers[index])
+  }
+}
+
+console.log(`Numeros ímpares: ${oddNumbersString.join(', ').replace('7,', '7 e')}. Números pares: ${evenNumbersString.join(', ').replace('0,' , '0 e')}.`);
