@@ -20,7 +20,11 @@
     4
     5
 */
-
+// let i = 0
+// while (i <= 5) {
+//   console.log(i);
+//   i++
+// }
 
 
 /*
@@ -28,7 +32,9 @@
 
   - Utilizando um for loop, faça o mesmo que foi pedido no exercício 01.
 */
-
+for (let i = 0; i <= 5; i++) {
+  // console.log(i);
+}
 
 
 /*
@@ -42,7 +48,9 @@
   "Esta é a Xª vez que esta frase é exibida no console."
 */
 
-
+for (var i = 0; i <= 10; i++) {
+  // console.log(`Esta é a ${i}ª vez que esta frase é exibida no console.`);
+}
 
 /*
   04 - Comente o loop acima e:
@@ -56,6 +64,12 @@
 
 const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
 
+let upperCaseCities = []
+
+for (let index = 0; index < cities.length; index++) {
+  upperCaseCities.push(cities[index])
+}
+console.log(upperCaseCities);
 /*
   05 - Comente o console.log acima e:
 
@@ -66,7 +80,11 @@ const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
 */
 
 const names = ['João Grilo', 'Chicó', 'Rosinha']
-
+let template = ''
+for (let index = 0; index < names.length; index++) {
+  template +='<li>' + names[index]+ '</li>';
+}
+console.log(template);
 /*
   06 - Comente o console.log acima e:
 
@@ -77,7 +95,11 @@ const names = ['João Grilo', 'Chicó', 'Rosinha']
 */
 
 const numbers = ['91', '5', '30', '97', '83', '31']
-
+let totalNumbers = 0
+for (let index = 0; index < numbers.length; index++) {
+  totalNumbers += Number(numbers[index])
+}
+console.log(totalNumbers);
 /*
   07 - Comente o console.log acima.
 
@@ -102,3 +124,12 @@ const arrays = [
   [8, 32, 16],
   [2, 8, 4]
 ]
+
+let total = 0
+for (let i = 0; i < arrays.length; i++) {
+  for (let j = 0; j < arrays[i].length; j++) {
+    total += arrays[i][j]
+  }
+  
+}
+console.log(total);
