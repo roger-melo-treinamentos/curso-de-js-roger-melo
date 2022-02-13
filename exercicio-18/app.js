@@ -49,7 +49,4 @@
       - "Correção dos exercícios da aula 04 da etapa 05" - Aula 01-01 da etapa  
         6;
     2) Pesquisar no MDN.
-  
-  Spoiler alert: este tipo de exercício será frequente em etapas mais avançadas  
-  do curso, onde falaremos sobre TDD. Vá se aquecendo =D
 */
