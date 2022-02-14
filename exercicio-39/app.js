@@ -28,7 +28,7 @@ console.log(sum(...numbers))
   - Descomente a div com a class "accordion", no index.html;
   - Quando um dos 3 itens do accordion for clicado exiba, abaixo do item, 
     o texto correspondente. Este é o resultado final:
-    https://youtu.be/yBxEJ8rBju0
+    https://youtu.be/4xnYqcqaSnI
   
   Leia a dica abaixo apenas se achar necessário.
 
