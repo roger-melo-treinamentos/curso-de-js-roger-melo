@@ -6,6 +6,7 @@
 
 ### Depoimentos de alunos
 
+- [Conquistou uma vaga em uma empresa de atuação internacional e trabalha de onde ele quiser](https://drive.google.com/file/d/1Giizabq5Q4LBtj5huXdcCuVNMa5Oefcb/view?usp=sharing)
 - [De estagiário à Front-end Developer em um mês e meio](https://youtu.be/IvG47ce4kz0)
 - [Contratado como Full-stack Developer pela Kabum com apenas 4 meses de estudos](https://youtu.be/8nwGTNKa6gM)
 - [Conquistou uma vaga com apenas 65% do curso concluído](https://drive.google.com/file/d/1e1M018usvoQg0r4GmBL6t4xf-L6wSp1c/view?usp=sharing)
