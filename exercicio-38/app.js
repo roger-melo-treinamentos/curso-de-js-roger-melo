@@ -176,8 +176,8 @@ const clock = new ExtendedClock({ template: 'h:m:s', precision: 1000 })
     origin 'http://...'"... for exibida no console, crie uma nova app na 
     plataforma da accuweather e pegue uma nova chave: 
     https://developer.accuweather.com/;
-  - O procedimento é o mesmo mostrado nas aulas da etapa em que construímos essa
-    aplicação.
+  - O procedimento é o mesmo mostrado nas aulas da etapa em que construímos 
+    essa aplicação.
 */
 
 
@@ -220,6 +220,6 @@ const clock = new ExtendedClock({ template: 'h:m:s', precision: 1000 })
       - Para obter a key e fazer requests, você terá que fazer login e escolher
         o plano free. Seus dados de cartão de crédito não serão solicitados.
   
-  PS: o desafio aqui é você implementar essa aplicação sozinho(a) e enviá-la 
-  para análise antes de ver as próximas aulas, ok? =)
+  PS: o desafio aqui é você implementar essa aplicação sozinho(a), antes 
+  de ver as próximas aulas, ok? =)
 */

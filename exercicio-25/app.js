@@ -62,7 +62,7 @@ const months = [
 /*
   08
   
-  Assim como a 1ª aplicação que implementamos no curso (Quiz), considere fazer 
+  Assim como a 1ª aplicação que implementamos (Quiz), considere fazer 
   da aplicação To-do List uma peça do seu portfólio.
 
   Desenvolva a sua versão do To-do List e, se você sentir que a desenvolveu 
