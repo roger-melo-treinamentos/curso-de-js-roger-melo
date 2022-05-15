@@ -18,7 +18,7 @@
 Utilize os espaços entre os comentários abaixo para executar os códigos dos exercícios. Inclusive este.
 */
 
-
+const jonas = 27;
 
 /*
 04 - Comente o console.log acima, e:
