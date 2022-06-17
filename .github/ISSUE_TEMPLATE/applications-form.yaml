@@ -24,7 +24,7 @@ body:
   - type: dropdown
     id: language-features-check
     attributes:
-      label: A aplicação contém features da linguagem que não foram mostradas nas aulas?
+      label: A aplicação contém funcionalidades da linguagem que não foram mostradas nas aulas?
       options:
         - Sim
         - Não
