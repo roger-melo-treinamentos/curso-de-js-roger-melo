@@ -6,7 +6,7 @@
 
 ### Depoimentos de alunos
 
-- [Conquistou uma vaga de Junior Software Engineer em uma empresa dos EUA](https://drive.google.com/file/d/1Yabs-7RHFEUp1Op-SgfQnnBOnN3pOk2W/view?usp=sharing)
+- [Conquistou uma vaga de Junior Software Engineer em uma empresa dos EUA](https://drive.google.com/file/d/13QA07uI-eZTr5I7GaMl8QW6b2D0ZXkBZ/view?usp=sharing)
 - [Conquistou uma vaga em uma empresa de atuação internacional e trabalha de onde ele quiser](https://drive.google.com/file/d/1Giizabq5Q4LBtj5huXdcCuVNMa5Oefcb/view?usp=sharing)
 - [De estagiário à Front-end Developer em um mês e meio](https://youtu.be/IvG47ce4kz0)
 - [Contratado como Full-stack Developer pela Kabum com apenas 4 meses de estudos](https://youtu.be/8nwGTNKa6gM)
