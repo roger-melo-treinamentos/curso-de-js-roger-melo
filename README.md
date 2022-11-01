@@ -4,7 +4,7 @@
   Curso de JavaScript Roger Melo
 </h2>
 
-### Depoimentos de alunos
+### Resultados de alunos
 
 - [Conquistou uma vaga de Junior Software Engineer em uma empresa dos EUA](https://drive.google.com/file/d/13QA07uI-eZTr5I7GaMl8QW6b2D0ZXkBZ/view?usp=sharing)
 - [Conquistou uma vaga em uma empresa de atuação internacional e trabalha de onde ele quiser](https://drive.google.com/file/d/1Giizabq5Q4LBtj5huXdcCuVNMa5Oefcb/view?usp=sharing)
@@ -17,6 +17,10 @@
 - [O freelancer que tinha dificuldades com JavaScript e hoje constrói aplicações do zero](https://youtu.be/ohS6JsCmYys)
 - ["Não sou de fazer vídeo pra curso. Mas esse eu tive que fazer"](https://youtu.be/tJ1hZGb0aOY)
 - [Ele começou do zero e já entende o que frameworks fazem por baixo dos panos](https://youtu.be/oaANN2qb8dw)
+
+### Lista de espera
+
+- Para entrar na lista de espera do CJRM, acesse [este link](https://rogermelo.com.br/lista-espera-cjrm).
 
 ### Tem alguma dúvida?
 
