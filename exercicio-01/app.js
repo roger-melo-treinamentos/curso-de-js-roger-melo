@@ -1,99 +1,97 @@
-/*
-01 - Neste diretório (exercicio-01), há um index.html vazio.
+ /*
+01 - In this diary (exercicio-01), there is index.html vazio.
 
-Faça o seguinte:
+Do the following:
 
-- Declare uma marcação HTML básica nele;
-- Modifique a linguagem para português do Brasil;
-- Remova as meta tags desnecessárias;
-- Modifique o title para "Exercício 01";
-- E linke este arquivo, app.js, antes do fechamento da tag body.
+- Declare basic HTML markup in it;
+- Change the language to Brazilian Portuguese;
+- Remove unnecessary meta tags;
+- Change the title to "Exercise 01";
+- And link this file, app.js, before the closing body tag.
 */
 
 /*
-02 - Inicie o seu servidor local e abra o console do browser.
+02 - Start your local server and open the browser console.
 */
 
 /*
-03 - Para certificar-se que este arquivo realmente está linkado, exiba a frase  
-"JS is Awesome!" em um alert no browser.
+03 - To make sure that this file is really linked, display the phrase
+"JS is Awesome!" in a browser alert.
 
-Como mencionei durante a aula: não se preocupe em entender 100% o que os comandos  
-"alert" e "console" fazem. Nós falaremos sobre eles mais à frente =)
+As I mentioned during the class: don't worry about understanding 100% what the commands
+"alert" and "console" do. We'll talk about them later =)
 
-Utilize os espaços entre os comentários abaixo para executar os códigos dos 
-exercícios. Inclusive o alert mencionado acima.
-*/
-
-
-
-/*
-04 - Comente o alert que você escreveu acima, utilizando o comentário de uma linha.
-*/
-
-/*
-05 - Declare uma const "myBirthYear", que recebe o ano do seu nascimento, com 4  
-dígitos. Ex.: 1930.
+Use the spaces between the comments below to run the codes from the
+Exercises. Including the alert mentioned above.
 */
 
 
 
 /*
-06 - Declare uma const "currentYear", que recebe o ano atual, com 4 dígitos.
+04 - Comment the alert you wrote above, using the one-line comment.
+*/
+
+/*
+05 - Declare a const "myBirthYear", which receives the year of your birth, with 4
+digits. For example: 1930.
 */
 
 
 
 /*
-07 - Exiba as const "myBirthYear" e "currentYear", lado a lado, no console do browser.
+06 - Declare a "currentYear" const, which receives the current year, with 4 digits.  
+*/
+
+
+/*
+07 - Display the const "myBirthYear" and "currentYear", side by side, in the browser console.
 */
 
 
 
 /*
-08 - Experimente.
+08 - Give it a try.
 
-- Declare uma const "myAge", que recebe o ano atual subtraído pelo ano do seu  
-nascimento. Mas sem digitar os números manualmente.
+- Declare a const "myAge", which receives the current year subtracted by the year of your
+birth. But without typing the numbers manually.
 
-Você pode utilizar o sinal de menos (-) entre os dois valores e verificar o que  
-acontece. 
+You can use the minus sign (-) between the two values ​​and check what
+it happens.
 
-- Exiba a "myAge" no console.
+- Display "myAge" in the console.
 */
 
 
 
 /*
-09 - Antes do console.log abaixo, declare uma const "ten", que recebe o número  
-10 e:
+09 - Before the console.log below, declare a const "ten", which receives the number
+10 and:
 
-- Descomente o console.log;
-- Substitua a palavra "valor1" pelo ano atual somado à 10;
-- Substitua a palavra "valor2" pela sua idade somada à 10;
-- Os números não devem ser digitados manualmente;
-- Observe o resultado no console do browser.
+- Uncomment the console.log;
+- Replace the word "valor1" with the current year plus 10;
+- Replace the word "valor2" with your age plus 10;
+- Numbers must not be entered manually;
+- Observe the result in the browser console.
 
-Não se assuste com as crases e os cifrões. Conversaremos mais sobre operações  
-matemáticas e strings (textos) em breve =)
+Don't be scared by the crases and dollar signs. We'll talk more about operations
+math and strings (texts) coming soon =)
 */
 
-// console.log(`Em ${valor1}, estarei com ${valor2} anos.`)
+// console.log(`Em ${valor1}, will be ${valor2} years.`)
 
 /*
-10 - Abra o site abaixo no browser e faça o seguinte:
+10 - Open the website below in your browser and do the following:
 
 http://whathappenedinmybirthyear.com/
 
-- Abra o console do devtools;
-- Provavelmente, haverão alguns warnings nele. Pressione ctrl + L para limpá-lo;
-- No console do devtools, declare uma const "myBirthYear" que recebe o ano em que  
-você nasceu (4 dígitos) e pressione enter;
-- No final da 1ª linha do código abaixo, substitua SEU_ANO_DE_NASCIMENTO pelo uso  
-da const myBirthYear;
-- Cole as duas linhas de código no console, pressione enter, feche o console e  
-veja o que acontece.
-
+- Open the devtools console;
+- There will probably be some warnings in it. Press ctrl + L to clear it;
+- In the devtools console, declare a const "myBirthYear" that receives the year in which
+you were born (4 digits) and press enter;
+- At the end of the 1st line of the code below, replace YOUR_YEAR_DE_BIRTH with the use
+from the construct myBirthYear;
+- Paste the two lines of code into the console, press enter, close the console and
+see what happens.
 document.querySelector('#birthYear').value = SEU_ANO_DE_NASCIMENTO
 document.querySelector('.formButton').click()
 */
