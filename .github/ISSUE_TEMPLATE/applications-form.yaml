@@ -26,7 +26,7 @@ body:
     id: language-features-check
     attributes:
       label: Sua aplicação contém funcionalidades da linguagem que não foram mostradas no CJRM até aqui?
-      description: Para ser analisada, sua aplicação deve ter apenas as funcionalidades mostradas até aqui no CJRM (a não ser que o oposto tenha sido pedido)
+      description: Para ser analisada, sua aplicação deve ter apenas as funcionalidades da linguagem mostradas até aqui no CJRM (a não ser que o oposto tenha sido pedido)
       options:
         - Sim
         - Não
