@@ -15,7 +15,8 @@ body:
   - type: dropdown
     id: functionality-check
     attributes:
-      label: A sua aplicação contém funcionalidades que não foram mostradas nas aulas da aplicação?
+      label: Sua aplicação contém funcionalidades que não foram mostradas nas aulas da aplicação?
+      description: Para ser analisada, sua aplicação deve ter apenas as funcionalidades mostradas na aula dela (a não ser que o oposto tenha sido pedido)
       options:
         - Sim
         - Não
@@ -24,7 +25,8 @@ body:
   - type: dropdown
     id: language-features-check
     attributes:
-      label: A sua aplicação contém funcionalidades da linguagem que não foram mostradas no CJRM até aqui?
+      label: Sua aplicação contém funcionalidades da linguagem que não foram mostradas no CJRM até aqui?
+      description: Para ser analisada, sua aplicação deve ter apenas as funcionalidades mostradas até aqui no CJRM (a não ser que o oposto tenha sido pedido)
       options:
         - Sim
         - Não
