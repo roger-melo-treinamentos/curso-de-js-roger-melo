@@ -16,7 +16,7 @@ busque fazer esse exercício sem rever partes da aula.
 vimos até aqui.
 
 O uso do Bootstrap ou qualquer biblioteca CSS é opcional. Porém, eu recomendo 
-que nesse momento você foque em desenvolver a lógica da aplicação com o 
-JavaScript. Em um momento futuro, você pode voltar e melhorar a estilização 
-da aplicação. 
+que nesse momento, ao invés de focar em CSS, você foque em desenvolver a 
+lógica da aplicação com o JavaScript. Em um momento futuro, você pode voltar 
+e melhorar a estilização da aplicação. 
 */
