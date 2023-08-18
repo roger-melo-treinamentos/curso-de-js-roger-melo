@@ -214,7 +214,6 @@
 - Um preview da Weather Application - Aula 01-04
 - Um overview da AccuWeather API - Aula 01-05
 - Obtendo informações da cidade - Aula 01-06
-- Observação sobre o áudio do próximo vídeo
 - Obtendo informações do clima da cidade - Aula 01-07
 - Exercícios da aula 01
 - Pesquisa da aula 01
