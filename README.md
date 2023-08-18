@@ -20,7 +20,7 @@
 
 ### Lista de espera
 
-- Para entrar na lista de espera do CJRM, acesse [este link](https://rogermelo.com.br/lista-espera-cjrm).
+Para entrar na lista de espera do CJRM, acesse [este link](https://rogermelo.com.br/lista-espera-cjrm).
 
 ### Conteúdo
 
