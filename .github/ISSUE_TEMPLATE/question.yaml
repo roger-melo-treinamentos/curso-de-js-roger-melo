@@ -1,0 +1,73 @@
+name: ❓Dúvida
+description: Esclarecimento de dúvidas
+labels: [❓ dúvida]
+body:
+  - type: dropdown
+    id: module-check
+    attributes:
+      label: Etapa da aula
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+    validations:
+      required: true
+  - type: input
+    id: lesson-check
+    attributes:
+      label: Nome da aula
+      placeholder: Arrow functions - Aula 02-02
+    validations:
+      required: true
+  - type: input
+    id: link-check
+    attributes:
+      label: Link da aula
+      placeholder: https://app.nutror.com/v3/curso/x/cjrm/aula/123
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Descreva a dúvida. DICA - deixe um passo a passo para a reprodução do problema, o comportamento que você esperava e o comportamento que está tendo.
+      value: |
+        <!--
+        Se você precisar adicionar trechos de código, coloque-os entre 3 crases, assim:
+
+        ```js
+        const myConst = 'x'
+        const myConst2 = 'y'
+        ```
+
+        Colocando 3 crases antes e 3 crases depois, o código bloco de código será 
+        formatado corretamente. O "js" ali em cima é para que o código seja 
+        colorizado com base em JavaScript. 
+        
+        Se precisar usar HTML ou CSS, basta substituir "js" pelo nome da 
+        linguagem. 
+
+        Antes de publicar a issue, lembre-se de clicar na aba "Preview", para visualizar se a formatação está correta.
+
+        Quanto mais específico você for, mais fácil será ajudá-lo(a) =)
+        -->
+
+        <!-- ESCREVA SUA DÚVIDA APÓS ESSA LINHA -->
+
+
+
+        <!-- Não apague daqui para baixo! -->
+        @Roger-Melo
+    validations:
+      required: true

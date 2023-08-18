@@ -1,0 +1,53 @@
+name: 🔥Aplicação
+description: Issues relacionadas a análises de aplicações desenvolvidas no treinamento
+title: "Aplicação: [NOME_DA_APLICAÇÃO]"
+labels: [🔥aplicação]
+body:
+  - type: dropdown
+    id: colors-check
+    attributes:
+      label: As cores da sua versão da aplicação são diferentes das cores da aplicação mostrada na aula?
+      options:
+        - Sim
+        - Não
+    validations:
+      required: true
+  - type: dropdown
+    id: functionality-check
+    attributes:
+      label: Sua aplicação contém funcionalidades que não foram mostradas nas aulas da aplicação?
+      description: Para ser analisada, sua aplicação deve ter apenas as funcionalidades mostradas na aula dela (a não ser que o oposto tenha sido pedido)
+      options:
+        - Sim
+        - Não
+    validations:
+      required: true
+  - type: dropdown
+    id: language-features-check
+    attributes:
+      label: Sua aplicação contém funcionalidades da linguagem que não foram mostradas no CJRM até aqui?
+      description: Para ser analisada, sua aplicação deve ter apenas as funcionalidades da linguagem mostradas até aqui no CJRM (a não ser que o oposto tenha sido pedido)
+      options:
+        - Sim
+        - Não
+    validations:
+      required: true
+  - type: input
+    id: repo-link
+    attributes:
+      label: Link do repositório da aplicação (ou pasta pública no Google Drive)
+      placeholder: Insira aqui o link do repositório ou pasta no Drive
+    validations:
+      required: true
+  - type: textarea
+    id: obstacles
+    attributes:
+      label: Maiores dificuldades durante a implementação
+    validations:
+      required: true
+  - type: textarea
+    id: easiness
+    attributes:
+      label: Menores dificuldades durante a implementação
+    validations:
+      required: true
