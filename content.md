@@ -4,9 +4,9 @@
 
 - A Aula mais importante do CJRM
 - Seu acesso ao grupo exclusivo só para os alunos do CJRM 🔥
-- Semana do JAvaScript: Aula 1
-- Semana do JAvaScript: Aula 2
-- Semana do JAvaScript: Aula 3
+- Semana do JavaScript: Aula 1
+- Semana do JavaScript: Aula 2
+- Semana do JavaScript: Aula 3
 
 ## Etapa 01 - Os primeiros passos
 
