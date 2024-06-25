@@ -26,4 +26,6 @@ Repito, para eu não pecar pela falta: o certificado só é emitido para quem es
 
 ### Quanto tempo de acesso tenho ao CJRM?
 
-Se você é aluno e está com dúvidas sobre o seu período de acesso, envie um email para oi@rogermelo.com.br
+Na plataforma do treinamento, acesse o menu superior "Meus Cursos". A data de expiração estará exibida no card do CJRM. 
+
+Se você é aluno e, após seguir o passo do parágrafo acima restarem dúvidas sobre o seu período de acesso, envie um email para oi@rogermelo.com.br
