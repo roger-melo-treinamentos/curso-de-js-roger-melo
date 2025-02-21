@@ -14,7 +14,7 @@ Para entrar na lista de espera do CJRM, acesse [este link](https://www.rogermelo
 
 ### Conteúdo
 
-Veja o conteúdo completo do CJRM [aqui](content.md).
+Veja o conteúdo do CJRM [aqui](content.md).
 
 ### Tem alguma dúvida?
 
